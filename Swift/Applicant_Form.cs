@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Swift
 {
-    public partial class Employer_Login : Form
+    public partial class Applicant_Form : Form
     {
-        public Employer_Login()
+        public Applicant_Form()
         {
             InitializeComponent();
             SetBackground();
@@ -31,20 +31,38 @@ namespace Swift
             this.BackgroundImage = new Bitmap(this.Width, this.Height);
             Graphics graphics = Graphics.FromImage(this.BackgroundImage);
             graphics.FillRectangle(gradientBrush, this.ClientRectangle);
+
+            applicant_pnl3.BackgroundImage = new Bitmap(applicant_pnl3.Width, applicant_pnl3.Height);
+            Graphics graphics2 = Graphics.FromImage(applicant_pnl3.BackgroundImage);
+            graphics2.FillRectangle(gradientBrush, applicant_pnl3.ClientRectangle);
         }
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            Opening_form BackHome2 = new Opening_form();
-            BackHome2.Show();
-            this.Close();
+            Application.Exit();
         }
 
-        private void Button1_Click(object sender, EventArgs e)
+        private void Applicant_Form_Load(object sender, EventArgs e)
         {
-            Employer_form employer_Form = new Employer_form();
-            employer_Form.Show();
+
+        }
+
+        private void Applicant_lbl1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Applicant_pnl3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Applicant_btn3_Click(object sender, EventArgs e)
+        {
+            Opening_form Backhome3 = new Opening_form();
+            Backhome3.Show();
             this.Hide();
         }
     }
-}
+    }
+

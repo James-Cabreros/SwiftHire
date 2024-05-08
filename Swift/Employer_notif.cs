@@ -11,11 +11,11 @@ using System.Windows.Forms;
 
 namespace Swift
 {
-    public partial class Employer_Login : Form
+    public partial class Employer_notif : Form
     {
-        public Employer_Login()
+        public Employer_notif()
         {
-            InitializeComponent();
+            InitializeComponent(); 
             SetBackground();
         }
         private void SetBackground()
@@ -33,18 +33,10 @@ namespace Swift
             graphics.FillRectangle(gradientBrush, this.ClientRectangle);
         }
 
-        private void Button2_Click(object sender, EventArgs e)
-        {
-            Opening_form BackHome2 = new Opening_form();
-            BackHome2.Show();
-            this.Close();
-        }
 
-        private void Button1_Click(object sender, EventArgs e)
+        private void Employer_notif_Load(object sender, EventArgs e)
         {
-            Employer_form employer_Form = new Employer_form();
-            employer_Form.Show();
-            this.Hide();
+
         }
     }
 }

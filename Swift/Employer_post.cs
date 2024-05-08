@@ -11,11 +11,11 @@ using System.Windows.Forms;
 
 namespace Swift
 {
-    public partial class Employer_Login : Form
+    public partial class Employer_post : Form
     {
-        public Employer_Login()
+        public Employer_post()
         {
-            InitializeComponent();
+            InitializeComponent(); 
             SetBackground();
         }
         private void SetBackground()
@@ -31,20 +31,12 @@ namespace Swift
             this.BackgroundImage = new Bitmap(this.Width, this.Height);
             Graphics graphics = Graphics.FromImage(this.BackgroundImage);
             graphics.FillRectangle(gradientBrush, this.ClientRectangle);
-        }
+        
+    }
 
-        private void Button2_Click(object sender, EventArgs e)
+        private void Employer_post_Load(object sender, EventArgs e)
         {
-            Opening_form BackHome2 = new Opening_form();
-            BackHome2.Show();
-            this.Close();
-        }
 
-        private void Button1_Click(object sender, EventArgs e)
-        {
-            Employer_form employer_Form = new Employer_form();
-            employer_Form.Show();
-            this.Hide();
         }
     }
 }
