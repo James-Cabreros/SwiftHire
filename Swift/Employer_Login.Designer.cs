@@ -31,12 +31,13 @@
             System.Windows.Forms.Label label1;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Employer_Login));
             this.Employer_pnl1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.employer_txtbx1 = new System.Windows.Forms.TextBox();
+            this.employer_txtbx2 = new System.Windows.Forms.TextBox();
+            this.employer_chbx1 = new System.Windows.Forms.CheckBox();
+            this.employer_btn1 = new System.Windows.Forms.Button();
+            this.employer_bkbtn = new System.Windows.Forms.Button();
             label1 = new System.Windows.Forms.Label();
             this.Employer_pnl1.SuspendLayout();
             this.SuspendLayout();
@@ -48,32 +49,20 @@
             label1.ForeColor = System.Drawing.Color.Transparent;
             label1.Location = new System.Drawing.Point(106, 29);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(242, 40);
+            label1.Size = new System.Drawing.Size(232, 40);
             label1.TabIndex = 1;
-            label1.Text = "Company Sign-in";
+            label1.Text = "Company Log-in";
             // 
             // Employer_pnl1
             // 
             this.Employer_pnl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(0)))), ((int)(((byte)(36)))));
-            this.Employer_pnl1.Controls.Add(this.button2);
+            this.Employer_pnl1.Controls.Add(this.employer_bkbtn);
             this.Employer_pnl1.Controls.Add(label1);
             this.Employer_pnl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.Employer_pnl1.Location = new System.Drawing.Point(0, 0);
             this.Employer_pnl1.Name = "Employer_pnl1";
             this.Employer_pnl1.Size = new System.Drawing.Size(484, 91);
             this.Employer_pnl1.TabIndex = 0;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(0)))), ((int)(((byte)(36)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(456, 0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(28, 28);
-            this.button2.TabIndex = 7;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // label2
             // 
@@ -99,33 +88,67 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Username:";
             // 
-            // textBox1
+            // employer_txtbx1
             // 
-            this.textBox1.Location = new System.Drawing.Point(161, 153);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(196, 20);
-            this.textBox1.TabIndex = 4;
+            this.employer_txtbx1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.employer_txtbx1.Location = new System.Drawing.Point(161, 151);
+            this.employer_txtbx1.Name = "employer_txtbx1";
+            this.employer_txtbx1.Size = new System.Drawing.Size(196, 25);
+            this.employer_txtbx1.TabIndex = 4;
             // 
-            // textBox2
+            // employer_txtbx2
             // 
-            this.textBox2.Location = new System.Drawing.Point(162, 199);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(196, 20);
-            this.textBox2.TabIndex = 5;
+            this.employer_txtbx2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.employer_txtbx2.Location = new System.Drawing.Point(161, 194);
+            this.employer_txtbx2.Name = "employer_txtbx2";
+            this.employer_txtbx2.Size = new System.Drawing.Size(196, 25);
+            this.employer_txtbx2.TabIndex = 5;
+            this.employer_txtbx2.UseSystemPasswordChar = true;
+            this.employer_txtbx2.TextChanged += new System.EventHandler(this.employer_txtbx2_TextChanged);
             // 
-            // button1
+            // employer_chbx1
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(0)))), ((int)(((byte)(36)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Location = new System.Drawing.Point(205, 240);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(110, 38);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Sign-in";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            this.employer_chbx1.AutoSize = true;
+            this.employer_chbx1.BackColor = System.Drawing.Color.Transparent;
+            this.employer_chbx1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.employer_chbx1.ForeColor = System.Drawing.Color.Transparent;
+            this.employer_chbx1.Location = new System.Drawing.Point(161, 225);
+            this.employer_chbx1.Name = "employer_chbx1";
+            this.employer_chbx1.Size = new System.Drawing.Size(97, 17);
+            this.employer_chbx1.TabIndex = 14;
+            this.employer_chbx1.Text = "See password";
+            this.employer_chbx1.UseVisualStyleBackColor = false;
+            this.employer_chbx1.CheckedChanged += new System.EventHandler(this.employer_chbx1_CheckedChanged);
+            // 
+            // employer_btn1
+            // 
+            this.employer_btn1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(0)))), ((int)(((byte)(36)))));
+            this.employer_btn1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.employer_btn1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.employer_btn1.ForeColor = System.Drawing.Color.Transparent;
+            this.employer_btn1.Image = global::Swift.Properties.Resources.icons8_log_in_25;
+            this.employer_btn1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.employer_btn1.Location = new System.Drawing.Point(202, 257);
+            this.employer_btn1.Name = "employer_btn1";
+            this.employer_btn1.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.employer_btn1.Size = new System.Drawing.Size(105, 38);
+            this.employer_btn1.TabIndex = 13;
+            this.employer_btn1.Text = "Log-in";
+            this.employer_btn1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.employer_btn1.UseVisualStyleBackColor = false;
+            this.employer_btn1.Click += new System.EventHandler(this.Button1_Click);
+            // 
+            // employer_bkbtn
+            // 
+            this.employer_bkbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(0)))), ((int)(((byte)(36)))));
+            this.employer_bkbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.employer_bkbtn.Image = ((System.Drawing.Image)(resources.GetObject("employer_bkbtn.Image")));
+            this.employer_bkbtn.Location = new System.Drawing.Point(456, 0);
+            this.employer_bkbtn.Name = "employer_bkbtn";
+            this.employer_bkbtn.Size = new System.Drawing.Size(28, 28);
+            this.employer_bkbtn.TabIndex = 7;
+            this.employer_bkbtn.UseVisualStyleBackColor = false;
+            this.employer_bkbtn.Click += new System.EventHandler(this.Button2_Click);
             // 
             // Employer_Login
             // 
@@ -133,9 +156,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.ClientSize = new System.Drawing.Size(484, 361);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.employer_chbx1);
+            this.Controls.Add(this.employer_btn1);
+            this.Controls.Add(this.employer_txtbx2);
+            this.Controls.Add(this.employer_txtbx1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Employer_pnl1);
@@ -143,6 +167,7 @@
             this.Name = "Employer_Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Employer_Login";
+            this.Load += new System.EventHandler(this.Employer_Login_Load);
             this.Employer_pnl1.ResumeLayout(false);
             this.Employer_pnl1.PerformLayout();
             this.ResumeLayout(false);
@@ -155,9 +180,10 @@
         private System.Windows.Forms.Panel Employer_pnl1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox employer_txtbx1;
+        private System.Windows.Forms.TextBox employer_txtbx2;
+        private System.Windows.Forms.Button employer_btn1;
+        private System.Windows.Forms.Button employer_bkbtn;
+        private System.Windows.Forms.CheckBox employer_chbx1;
     }
 }

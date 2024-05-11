@@ -133,6 +133,7 @@
             this.applicant_btn2.Text = "Notifications";
             this.applicant_btn2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.applicant_btn2.UseVisualStyleBackColor = true;
+            this.applicant_btn2.Click += new System.EventHandler(this.applicant_btn2_Click);
             // 
             // applicant_btn1
             // 
@@ -148,6 +149,7 @@
             this.applicant_btn1.TabIndex = 6;
             this.applicant_btn1.Text = "Posts";
             this.applicant_btn1.UseVisualStyleBackColor = true;
+            this.applicant_btn1.Click += new System.EventHandler(this.applicant_btn1_Click);
             // 
             // applicant_pnl3
             // 

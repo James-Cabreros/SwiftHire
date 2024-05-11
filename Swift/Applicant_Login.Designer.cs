@@ -31,12 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Applicant_Login));
             this.applicant_pnl1 = new System.Windows.Forms.Panel();
             this.Applicant_lbl1 = new System.Windows.Forms.Label();
-            this.Applicant_bkbtn = new System.Windows.Forms.Button();
             this.Applicant_lbl2 = new System.Windows.Forms.Label();
             this.Applicant_lbl3 = new System.Windows.Forms.Label();
             this.Applicant_txtbx1 = new System.Windows.Forms.TextBox();
             this.Applicant_txtbx2 = new System.Windows.Forms.TextBox();
-            this.Signin_btn = new System.Windows.Forms.Button();
+            this.applicant_btn1 = new System.Windows.Forms.Button();
+            this.Applicant_chbx1 = new System.Windows.Forms.CheckBox();
+            this.Applicant_bkbtn = new System.Windows.Forms.Button();
             this.applicant_pnl1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,18 +62,6 @@
             this.Applicant_lbl1.Size = new System.Drawing.Size(252, 40);
             this.Applicant_lbl1.TabIndex = 2;
             this.Applicant_lbl1.Text = "Applicant Sign-in";
-            // 
-            // Applicant_bkbtn
-            // 
-            this.Applicant_bkbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(0)))), ((int)(((byte)(36)))));
-            this.Applicant_bkbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Applicant_bkbtn.Image = ((System.Drawing.Image)(resources.GetObject("Applicant_bkbtn.Image")));
-            this.Applicant_bkbtn.Location = new System.Drawing.Point(456, 0);
-            this.Applicant_bkbtn.Name = "Applicant_bkbtn";
-            this.Applicant_bkbtn.Size = new System.Drawing.Size(28, 28);
-            this.Applicant_bkbtn.TabIndex = 8;
-            this.Applicant_bkbtn.UseVisualStyleBackColor = false;
-            this.Applicant_bkbtn.Click += new System.EventHandler(this.Button2_Click);
             // 
             // Applicant_lbl2
             // 
@@ -101,35 +90,64 @@
             // 
             // Applicant_txtbx1
             // 
-            this.Applicant_txtbx1.Location = new System.Drawing.Point(161, 153);
+            this.Applicant_txtbx1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Applicant_txtbx1.Location = new System.Drawing.Point(161, 151);
             this.Applicant_txtbx1.Name = "Applicant_txtbx1";
-            this.Applicant_txtbx1.Size = new System.Drawing.Size(196, 20);
+            this.Applicant_txtbx1.Size = new System.Drawing.Size(196, 25);
             this.Applicant_txtbx1.TabIndex = 11;
             this.Applicant_txtbx1.TextChanged += new System.EventHandler(this.A_Username_TextChanged);
             // 
             // Applicant_txtbx2
             // 
-            this.Applicant_txtbx2.Location = new System.Drawing.Point(162, 199);
+            this.Applicant_txtbx2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Applicant_txtbx2.Location = new System.Drawing.Point(161, 194);
             this.Applicant_txtbx2.Name = "Applicant_txtbx2";
-            this.Applicant_txtbx2.Size = new System.Drawing.Size(196, 20);
+            this.Applicant_txtbx2.Size = new System.Drawing.Size(196, 25);
             this.Applicant_txtbx2.TabIndex = 12;
+            this.Applicant_txtbx2.UseSystemPasswordChar = true;
             this.Applicant_txtbx2.TextChanged += new System.EventHandler(this.A_Password_TextChanged);
             // 
-            // Signin_btn
+            // applicant_btn1
             // 
-            this.Signin_btn.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.Signin_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(0)))), ((int)(((byte)(36)))));
-            this.Signin_btn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Signin_btn.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Signin_btn.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.Signin_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Signin_btn.Location = new System.Drawing.Point(205, 240);
-            this.Signin_btn.Name = "Signin_btn";
-            this.Signin_btn.Size = new System.Drawing.Size(110, 38);
-            this.Signin_btn.TabIndex = 13;
-            this.Signin_btn.Text = "Sign-in";
-            this.Signin_btn.UseVisualStyleBackColor = false;
-            this.Signin_btn.Click += new System.EventHandler(this.Button1_Click_1);
+            this.applicant_btn1.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.applicant_btn1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(0)))), ((int)(((byte)(36)))));
+            this.applicant_btn1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.applicant_btn1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.applicant_btn1.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.applicant_btn1.Image = global::Swift.Properties.Resources.icons8_log_in_25;
+            this.applicant_btn1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.applicant_btn1.Location = new System.Drawing.Point(202, 257);
+            this.applicant_btn1.Name = "applicant_btn1";
+            this.applicant_btn1.Size = new System.Drawing.Size(105, 38);
+            this.applicant_btn1.TabIndex = 13;
+            this.applicant_btn1.Text = "Sign-in";
+            this.applicant_btn1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.applicant_btn1.UseVisualStyleBackColor = false;
+            this.applicant_btn1.Click += new System.EventHandler(this.Button1_Click_1);
+            // 
+            // Applicant_chbx1
+            // 
+            this.Applicant_chbx1.AutoSize = true;
+            this.Applicant_chbx1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Applicant_chbx1.Location = new System.Drawing.Point(161, 225);
+            this.Applicant_chbx1.Name = "Applicant_chbx1";
+            this.Applicant_chbx1.Size = new System.Drawing.Size(97, 17);
+            this.Applicant_chbx1.TabIndex = 14;
+            this.Applicant_chbx1.Text = "See password";
+            this.Applicant_chbx1.UseVisualStyleBackColor = true;
+            this.Applicant_chbx1.CheckedChanged += new System.EventHandler(this.Applicant_chbx1_CheckedChanged);
+            // 
+            // Applicant_bkbtn
+            // 
+            this.Applicant_bkbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(0)))), ((int)(((byte)(36)))));
+            this.Applicant_bkbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Applicant_bkbtn.Image = ((System.Drawing.Image)(resources.GetObject("Applicant_bkbtn.Image")));
+            this.Applicant_bkbtn.Location = new System.Drawing.Point(456, 0);
+            this.Applicant_bkbtn.Name = "Applicant_bkbtn";
+            this.Applicant_bkbtn.Size = new System.Drawing.Size(28, 28);
+            this.Applicant_bkbtn.TabIndex = 8;
+            this.Applicant_bkbtn.UseVisualStyleBackColor = false;
+            this.Applicant_bkbtn.Click += new System.EventHandler(this.Button2_Click);
             // 
             // Applicant_Login
             // 
@@ -137,7 +155,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(484, 361);
-            this.Controls.Add(this.Signin_btn);
+            this.Controls.Add(this.Applicant_chbx1);
+            this.Controls.Add(this.applicant_btn1);
             this.Controls.Add(this.Applicant_txtbx2);
             this.Controls.Add(this.Applicant_txtbx1);
             this.Controls.Add(this.Applicant_lbl3);
@@ -164,6 +183,7 @@
         private System.Windows.Forms.Label Applicant_lbl3;
         private System.Windows.Forms.TextBox Applicant_txtbx1;
         private System.Windows.Forms.TextBox Applicant_txtbx2;
-        private System.Windows.Forms.Button Signin_btn;
+        private System.Windows.Forms.Button applicant_btn1;
+        private System.Windows.Forms.CheckBox Applicant_chbx1;
     }
 }

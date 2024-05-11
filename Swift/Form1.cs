@@ -40,8 +40,8 @@ namespace Swift
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            Employer_Login employer_Login = new Employer_Login();
-            employer_Login.Show();
+            Employer_Login employer_login  = new Employer_Login();
+            employer_login.Show();
             this.Hide();
         }
 
