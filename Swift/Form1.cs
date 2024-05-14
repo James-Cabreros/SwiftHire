@@ -33,8 +33,8 @@ namespace Swift
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            Applicant_Login applicant_Login = new Applicant_Login();
-            applicant_Login.Show();
+            Applicant_regis applicant_regis = new Applicant_regis();
+            applicant_regis.Show();
             this.Hide();
         }
 

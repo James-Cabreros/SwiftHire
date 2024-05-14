@@ -12,14 +12,12 @@ using MySql.Data.MySqlClient;
 
 namespace Swift
 {
-    public partial class Applicant_Login : Form
+    public partial class Applicant_login : Form
     {
-        MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;username=root;password=;database=applicant_login");
+        MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;username=root;password=;database=SwiftHire");
         MySqlCommand command;
         MySqlDataReader mdr;
-
-
-        public Applicant_Login()
+        public Applicant_login()
         {
             InitializeComponent();
             SetBackground();
@@ -38,98 +36,74 @@ namespace Swift
             Graphics graphics = Graphics.FromImage(this.BackgroundImage);
             graphics.FillRectangle(gradientBrush, this.ClientRectangle);
         }
-        private void Applicant_Login_Load(object sender, EventArgs e)
+        private void Applicant_login_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void Button2_Click(object sender, EventArgs e)
+        private void applicant_bkbtn_Click(object sender, EventArgs e)
         {
-            Opening_form BackHome1 = new Opening_form();
-            BackHome1.Show();
+            Opening_form BackHome5 = new Opening_form();
+            BackHome5.Show();
             this.Close();
         }
 
-        private void Label3_Click(object sender, EventArgs e)
+        private void applicant_chbx1_CheckedChanged(object sender, EventArgs e)
         {
-
-        }
-
-       
-
-        private void A_Username_TextChanged(object sender, EventArgs e)
-        {
-          
-        }
-
-        private void A_Password_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Button1_Click_1(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty(Applicant_txtbx1.Text) || string.IsNullOrEmpty(Applicant_txtbx2.Text))
+            if (applicant_chbx1.Checked)
             {
-                MessageBox.Show("Please input Username and Password", "Error");
+                applicant_txtbx2.UseSystemPasswordChar = false;
             }
             else
             {
-                connection.Open();
-                string selectQuery = "SELECT * FROM `a_login-id` WHERE Username = @username AND Password = @password";
-                command = new MySqlCommand(selectQuery, connection);
-                command.Parameters.AddWithValue("@username", Applicant_txtbx1.Text);
-                command.Parameters.AddWithValue("@password", Applicant_txtbx2.Text);
-                mdr = command.ExecuteReader();
-                if (mdr.Read())
-                {
-                    MessageBox.Show("Login Successful!");
-                    this.Hide();
-                    Applicant_Form form2 = new Applicant_Form();
-                    form2.ShowDialog();
-                }
-                else
-                {
-                    connection.Close(); // Close the previous connection before opening a new one for the update
-
-                    // Check the number of existing users
-                    connection.Open();
-                    string countQuery = "SELECT COUNT(*) FROM `a_login-id`";
-                    command = new MySqlCommand(countQuery, connection);
-                    int userCount = Convert.ToInt32(command.ExecuteScalar());
-                    connection.Close();
-
-                    if (userCount < 2)
-                    {
-                        // Proceed with registration if the maximum number of users has not been reached
-                        connection.Open();
-                        string insertQuery = "INSERT INTO `a_login-id` (Username, Password) VALUES (@username, @password)";
-                        command = new MySqlCommand(insertQuery, connection);
-                        command.Parameters.AddWithValue("@username", Applicant_txtbx1.Text);
-                        command.Parameters.AddWithValue("@password", Applicant_txtbx2.Text);
-                        command.ExecuteNonQuery();
-                        connection.Close();
-
-                        MessageBox.Show("Registration Successful! You can now login.");
-                    }
-                    else
-                    {
-                        MessageBox.Show("something's not right with the username or password you entered.");
-                    }
-                }
+                applicant_txtbx2.UseSystemPasswordChar = true;
             }
         }
 
-        private void Applicant_chbx1_CheckedChanged(object sender, EventArgs e)
+        private void Applicant_btn1_Click(object sender, EventArgs e)
         {
-            if (Applicant_chbx1.Checked)
+         if (string.IsNullOrEmpty(applicant_txtbx1.Text) || string.IsNullOrEmpty(applicant_txtbx2.Text))
+         {
+         MessageBox.Show("Please input Username and Password", "Error");
+        }
+        else
+        {
+            try
             {
-                Applicant_txtbx2.UseSystemPasswordChar = false;
+             connection.Open();
+            string selectQuery = "SELECT * FROM `applicant_info` WHERE f_name = @username AND password = @password";
+            command = new MySqlCommand(selectQuery, connection);
+            command.Parameters.AddWithValue("@username", applicant_txtbx1.Text);
+            command.Parameters.AddWithValue("@password", applicant_txtbx2.Text);
+
+            Console.WriteLine("Query: " + selectQuery); // Print the query for debugging
+            Console.WriteLine("Username: " + applicant_txtbx1.Text); // Print the username for debugging
+            Console.WriteLine("Password: " + applicant_txtbx2.Text); // Print the password for debugging
+
+            mdr = command.ExecuteReader();
+            if (mdr.Read())
+            {
+                MessageBox.Show("Login Successful!");
+                this.Hide();
+                Applicant_Form form2 = new Applicant_Form();
+                form2.ShowDialog();
             }
             else
             {
-                Applicant_txtbx2.UseSystemPasswordChar = true;
+                MessageBox.Show("Invalid username or password");
             }
         }
+        catch (Exception ex)
+        {
+            MessageBox.Show("Error: " + ex.Message);
+        }
+        finally
+        {
+            connection.Close();
+        }
+    }
+}
+
+
     }
 }

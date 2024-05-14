@@ -109,11 +109,17 @@
     <Compile Include="Applicant_Form.Designer.cs">
       <DependentUpon>Applicant_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Applicant_Login.cs">
+    <Compile Include="Applicant_login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Applicant_Login.Designer.cs">
-      <DependentUpon>Applicant_Login.cs</DependentUpon>
+    <Compile Include="Applicant_login.Designer.cs">
+      <DependentUpon>Applicant_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Applicant_regis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Applicant_regis.Designer.cs">
+      <DependentUpon>Applicant_regis.cs</DependentUpon>
     </Compile>
     <Compile Include="applicant_notif.cs">
       <SubType>Form</SubType>
@@ -127,6 +133,7 @@
     <Compile Include="applicant_post.Designer.cs">
       <DependentUpon>applicant_post.cs</DependentUpon>
     </Compile>
+    <Compile Include="db_connection.cs" />
     <Compile Include="Employer_form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,8 +169,11 @@
     <EmbeddedResource Include="Applicant_Form.resx">
       <DependentUpon>Applicant_Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Applicant_Login.resx">
-      <DependentUpon>Applicant_Login.cs</DependentUpon>
+    <EmbeddedResource Include="Applicant_login.resx">
+      <DependentUpon>Applicant_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Applicant_regis.resx">
+      <DependentUpon>Applicant_regis.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="applicant_notif.resx">
       <DependentUpon>applicant_notif.cs</DependentUpon>
@@ -233,6 +243,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-log-in-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-register-25.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

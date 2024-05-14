@@ -117,11 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="applicant_lbl1.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="Applicant_bkbtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="applicant_bkbtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DgAACw4BQL7hQQAAAG1JREFUSEtjGAWjgD7gwYP/uQ8f/i/4//8/I1SIeuDMmf+sQAv+AC34D8QTaWIJ
+        DAAACwwBP0AiyAAAAG1JREFUSEtjGAWjgD7gwYP/uQ8f/i/4//8/I1SIeuDMmf+sQAv+AC34D8QTaWIJ
         yAdA/I+mlgANTodZAqRnDF1LgAbnwSy5f/9/MVSYeoCmFtA0iGhqONBA2iVTemW0HKDh+TQxfBSMAgKA
         gQEANjq1EfGHYVMAAAAASUVORK5CYII=
 </value>

@@ -99,7 +99,7 @@
             this.applicant_pnl2.Dock = System.Windows.Forms.DockStyle.Left;
             this.applicant_pnl2.Location = new System.Drawing.Point(0, 28);
             this.applicant_pnl2.Name = "applicant_pnl2";
-            this.applicant_pnl2.Size = new System.Drawing.Size(145, 422);
+            this.applicant_pnl2.Size = new System.Drawing.Size(145, 522);
             this.applicant_pnl2.TabIndex = 5;
             // 
             // applicant_btn3
@@ -156,7 +156,7 @@
             this.applicant_pnl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.applicant_pnl3.Location = new System.Drawing.Point(145, 28);
             this.applicant_pnl3.Name = "applicant_pnl3";
-            this.applicant_pnl3.Size = new System.Drawing.Size(655, 422);
+            this.applicant_pnl3.Size = new System.Drawing.Size(655, 522);
             this.applicant_pnl3.TabIndex = 6;
             this.applicant_pnl3.Paint += new System.Windows.Forms.PaintEventHandler(this.Applicant_pnl3_Paint);
             // 
@@ -164,7 +164,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 550);
             this.Controls.Add(this.applicant_pnl3);
             this.Controls.Add(this.applicant_pnl2);
             this.Controls.Add(this.Applicant_pnl1);

@@ -61,7 +61,7 @@
             this.employer_extbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.employer_extbtn.ForeColor = System.Drawing.Color.Transparent;
             this.employer_extbtn.Image = ((System.Drawing.Image)(resources.GetObject("employer_extbtn.Image")));
-            this.employer_extbtn.Location = new System.Drawing.Point(773, 0);
+            this.employer_extbtn.Location = new System.Drawing.Point(772, 0);
             this.employer_extbtn.Name = "employer_extbtn";
             this.employer_extbtn.Size = new System.Drawing.Size(28, 28);
             this.employer_extbtn.TabIndex = 1;
@@ -90,7 +90,7 @@
             this.employer_pnl2.Dock = System.Windows.Forms.DockStyle.Left;
             this.employer_pnl2.Location = new System.Drawing.Point(0, 28);
             this.employer_pnl2.Name = "employer_pnl2";
-            this.employer_pnl2.Size = new System.Drawing.Size(145, 422);
+            this.employer_pnl2.Size = new System.Drawing.Size(145, 522);
             this.employer_pnl2.TabIndex = 6;
             this.employer_pnl2.Paint += new System.Windows.Forms.PaintEventHandler(this.Employer_pnl2_Paint);
             // 
@@ -158,7 +158,7 @@
             this.employer_pnl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.employer_pnl3.Location = new System.Drawing.Point(145, 28);
             this.employer_pnl3.Name = "employer_pnl3";
-            this.employer_pnl3.Size = new System.Drawing.Size(655, 422);
+            this.employer_pnl3.Size = new System.Drawing.Size(655, 522);
             this.employer_pnl3.TabIndex = 7;
             this.employer_pnl3.Paint += new System.Windows.Forms.PaintEventHandler(this.Employer_pnl3_Paint);
             // 
@@ -166,7 +166,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 550);
             this.Controls.Add(this.employer_pnl3);
             this.Controls.Add(this.employer_pnl2);
             this.Controls.Add(this.employer_pnl1);

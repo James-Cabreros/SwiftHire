@@ -8,7 +8,7 @@ namespace Swift
 {
     public partial class Employer_Login : Form
     {
-        MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;username=root;password=;database=employer_login");
+        MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;username=root;password=;database=SwiftHire");
         MySqlCommand command;
         MySqlDataReader mdr;
 
@@ -50,7 +50,7 @@ namespace Swift
             else
             {
                 connection.Open();
-                string selectQuery = "SELECT * FROM `e_login-id` WHERE Username = @username AND Password = @password";
+                string selectQuery = "SELECT * FROM `employer_info` WHERE name = @username AND password = @password";
                 command = new MySqlCommand(selectQuery, connection);
                 command.Parameters.AddWithValue("@username", employer_txtbx1.Text);
                 command.Parameters.AddWithValue("@password", employer_txtbx2.Text);
@@ -68,7 +68,7 @@ namespace Swift
 
                     // Check the number of existing users
                     connection.Open();
-                    string countQuery = "SELECT COUNT(*) FROM `e_login-id`";
+                    string countQuery = "SELECT COUNT(*) FROM `employer_info`";
                     command = new MySqlCommand(countQuery, connection);
                     int userCount = Convert.ToInt32(command.ExecuteScalar());
                     connection.Close();
@@ -77,7 +77,7 @@ namespace Swift
                     {
                         // Proceed with registration if the maximum number of users has not been reached
                         connection.Open();
-                        string insertQuery = "INSERT INTO `e_login-id` (Username, Password) VALUES (@username, @password)";
+                        string insertQuery = "INSERT INTO `employer_info` (name, Password) VALUES (@username, @password)";
                         command = new MySqlCommand(insertQuery, connection);
                         command.Parameters.AddWithValue("@username", employer_txtbx1.Text);
                         command.Parameters.AddWithValue("@password", employer_txtbx2.Text);
