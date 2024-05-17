@@ -85,7 +85,7 @@
             this.applicant_chbx1.Location = new System.Drawing.Point(191, 234);
             this.applicant_chbx1.Name = "applicant_chbx1";
             this.applicant_chbx1.Size = new System.Drawing.Size(97, 17);
-            this.applicant_chbx1.TabIndex = 20;
+            this.applicant_chbx1.TabIndex = 19;
             this.applicant_chbx1.Text = "See password";
             this.applicant_chbx1.UseVisualStyleBackColor = false;
             this.applicant_chbx1.CheckedChanged += new System.EventHandler(this.applicant_chbx1_CheckedChanged);
@@ -106,6 +106,7 @@
             this.applicant_txtbx1.Name = "applicant_txtbx1";
             this.applicant_txtbx1.Size = new System.Drawing.Size(196, 25);
             this.applicant_txtbx1.TabIndex = 17;
+            this.applicant_txtbx1.TextChanged += new System.EventHandler(this.applicant_txtbx1_TextChanged);
             // 
             // applicant_lbl2
             // 
@@ -143,7 +144,7 @@
             this.Applicant_btn1.Name = "Applicant_btn1";
             this.Applicant_btn1.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.Applicant_btn1.Size = new System.Drawing.Size(105, 38);
-            this.Applicant_btn1.TabIndex = 19;
+            this.Applicant_btn1.TabIndex = 20;
             this.Applicant_btn1.Text = "Log-in";
             this.Applicant_btn1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Applicant_btn1.UseVisualStyleBackColor = false;

@@ -104,6 +104,9 @@ namespace Swift
     }
 }
 
+        private void applicant_txtbx1_TextChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 }

@@ -30,17 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Applicant_Form));
             this.Applicant_pnl1 = new System.Windows.Forms.Panel();
-            this.employer_extbtn = new System.Windows.Forms.Button();
             this.Applicant_lbl1 = new System.Windows.Forms.Label();
-            this.Employer_pcbx1 = new System.Windows.Forms.PictureBox();
             this.applicant_pnl2 = new System.Windows.Forms.Panel();
+            this.applicant_pnl3 = new System.Windows.Forms.Panel();
             this.applicant_btn3 = new System.Windows.Forms.Button();
             this.applicant_btn2 = new System.Windows.Forms.Button();
             this.applicant_btn1 = new System.Windows.Forms.Button();
-            this.applicant_pnl3 = new System.Windows.Forms.Panel();
+            this.Employer_pcbx1 = new System.Windows.Forms.PictureBox();
+            this.employer_extbtn = new System.Windows.Forms.Button();
             this.Applicant_pnl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Employer_pcbx1)).BeginInit();
             this.applicant_pnl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Employer_pcbx1)).BeginInit();
             this.SuspendLayout();
             // 
             // Applicant_pnl1
@@ -53,19 +53,6 @@
             this.Applicant_pnl1.Size = new System.Drawing.Size(800, 28);
             this.Applicant_pnl1.TabIndex = 0;
             // 
-            // employer_extbtn
-            // 
-            this.employer_extbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(0)))), ((int)(((byte)(36)))));
-            this.employer_extbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.employer_extbtn.ForeColor = System.Drawing.Color.Transparent;
-            this.employer_extbtn.Image = ((System.Drawing.Image)(resources.GetObject("employer_extbtn.Image")));
-            this.employer_extbtn.Location = new System.Drawing.Point(773, 0);
-            this.employer_extbtn.Name = "employer_extbtn";
-            this.employer_extbtn.Size = new System.Drawing.Size(28, 28);
-            this.employer_extbtn.TabIndex = 2;
-            this.employer_extbtn.UseVisualStyleBackColor = false;
-            this.employer_extbtn.Click += new System.EventHandler(this.Button2_Click);
-            // 
             // Applicant_lbl1
             // 
             this.Applicant_lbl1.AutoSize = true;
@@ -77,16 +64,6 @@
             this.Applicant_lbl1.TabIndex = 4;
             this.Applicant_lbl1.Text = "Applicant";
             this.Applicant_lbl1.Click += new System.EventHandler(this.Applicant_lbl1_Click);
-            // 
-            // Employer_pcbx1
-            // 
-            this.Employer_pcbx1.Image = ((System.Drawing.Image)(resources.GetObject("Employer_pcbx1.Image")));
-            this.Employer_pcbx1.Location = new System.Drawing.Point(49, 19);
-            this.Employer_pcbx1.Name = "Employer_pcbx1";
-            this.Employer_pcbx1.Size = new System.Drawing.Size(50, 50);
-            this.Employer_pcbx1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.Employer_pcbx1.TabIndex = 3;
-            this.Employer_pcbx1.TabStop = false;
             // 
             // applicant_pnl2
             // 
@@ -102,6 +79,15 @@
             this.applicant_pnl2.Size = new System.Drawing.Size(145, 522);
             this.applicant_pnl2.TabIndex = 5;
             // 
+            // applicant_pnl3
+            // 
+            this.applicant_pnl3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.applicant_pnl3.Location = new System.Drawing.Point(145, 28);
+            this.applicant_pnl3.Name = "applicant_pnl3";
+            this.applicant_pnl3.Size = new System.Drawing.Size(655, 522);
+            this.applicant_pnl3.TabIndex = 6;
+            this.applicant_pnl3.Paint += new System.Windows.Forms.PaintEventHandler(this.Applicant_pnl3_Paint);
+            // 
             // applicant_btn3
             // 
             this.applicant_btn3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -109,11 +95,11 @@
             this.applicant_btn3.ForeColor = System.Drawing.Color.Transparent;
             this.applicant_btn3.Image = global::Swift.Properties.Resources.icons8_logout_25;
             this.applicant_btn3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.applicant_btn3.Location = new System.Drawing.Point(0, 200);
+            this.applicant_btn3.Location = new System.Drawing.Point(3, 200);
             this.applicant_btn3.Name = "applicant_btn3";
             this.applicant_btn3.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
             this.applicant_btn3.Size = new System.Drawing.Size(145, 28);
-            this.applicant_btn3.TabIndex = 8;
+            this.applicant_btn3.TabIndex = 9;
             this.applicant_btn3.Text = "Logout";
             this.applicant_btn3.UseVisualStyleBackColor = true;
             this.applicant_btn3.Click += new System.EventHandler(this.Applicant_btn3_Click);
@@ -125,11 +111,11 @@
             this.applicant_btn2.ForeColor = System.Drawing.Color.Transparent;
             this.applicant_btn2.Image = global::Swift.Properties.Resources.icons8_post_25;
             this.applicant_btn2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.applicant_btn2.Location = new System.Drawing.Point(0, 166);
+            this.applicant_btn2.Location = new System.Drawing.Point(3, 166);
             this.applicant_btn2.Name = "applicant_btn2";
             this.applicant_btn2.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.applicant_btn2.Size = new System.Drawing.Size(145, 28);
-            this.applicant_btn2.TabIndex = 7;
+            this.applicant_btn2.TabIndex = 8;
             this.applicant_btn2.Text = "Notifications";
             this.applicant_btn2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.applicant_btn2.UseVisualStyleBackColor = true;
@@ -142,7 +128,7 @@
             this.applicant_btn1.ForeColor = System.Drawing.Color.Transparent;
             this.applicant_btn1.Image = global::Swift.Properties.Resources.icons8_menu_25;
             this.applicant_btn1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.applicant_btn1.Location = new System.Drawing.Point(0, 132);
+            this.applicant_btn1.Location = new System.Drawing.Point(3, 132);
             this.applicant_btn1.Name = "applicant_btn1";
             this.applicant_btn1.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.applicant_btn1.Size = new System.Drawing.Size(145, 28);
@@ -151,14 +137,28 @@
             this.applicant_btn1.UseVisualStyleBackColor = true;
             this.applicant_btn1.Click += new System.EventHandler(this.applicant_btn1_Click);
             // 
-            // applicant_pnl3
+            // Employer_pcbx1
             // 
-            this.applicant_pnl3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.applicant_pnl3.Location = new System.Drawing.Point(145, 28);
-            this.applicant_pnl3.Name = "applicant_pnl3";
-            this.applicant_pnl3.Size = new System.Drawing.Size(655, 522);
-            this.applicant_pnl3.TabIndex = 6;
-            this.applicant_pnl3.Paint += new System.Windows.Forms.PaintEventHandler(this.Applicant_pnl3_Paint);
+            this.Employer_pcbx1.Image = ((System.Drawing.Image)(resources.GetObject("Employer_pcbx1.Image")));
+            this.Employer_pcbx1.Location = new System.Drawing.Point(49, 19);
+            this.Employer_pcbx1.Name = "Employer_pcbx1";
+            this.Employer_pcbx1.Size = new System.Drawing.Size(50, 50);
+            this.Employer_pcbx1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.Employer_pcbx1.TabIndex = 3;
+            this.Employer_pcbx1.TabStop = false;
+            // 
+            // employer_extbtn
+            // 
+            this.employer_extbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(0)))), ((int)(((byte)(36)))));
+            this.employer_extbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.employer_extbtn.ForeColor = System.Drawing.Color.Transparent;
+            this.employer_extbtn.Image = ((System.Drawing.Image)(resources.GetObject("employer_extbtn.Image")));
+            this.employer_extbtn.Location = new System.Drawing.Point(773, 0);
+            this.employer_extbtn.Name = "employer_extbtn";
+            this.employer_extbtn.Size = new System.Drawing.Size(28, 28);
+            this.employer_extbtn.TabIndex = 2;
+            this.employer_extbtn.UseVisualStyleBackColor = false;
+            this.employer_extbtn.Click += new System.EventHandler(this.Button2_Click);
             // 
             // Applicant_Form
             // 
@@ -174,9 +174,9 @@
             this.Text = "Applicant_Form";
             this.Load += new System.EventHandler(this.Applicant_Form_Load);
             this.Applicant_pnl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Employer_pcbx1)).EndInit();
             this.applicant_pnl2.ResumeLayout(false);
             this.applicant_pnl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Employer_pcbx1)).EndInit();
             this.ResumeLayout(false);
 
         }

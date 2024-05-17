@@ -83,6 +83,11 @@ namespace Swift
         {
             Loadform(new applicant_notif());
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
     }
 

@@ -50,6 +50,8 @@
             this.Applicant_txtbx6 = new System.Windows.Forms.TextBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.applicant_btn1 = new System.Windows.Forms.Button();
+            this.applicant_cmbbx1 = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.applicant_pnl1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -118,7 +120,7 @@
             this.Applicant_txtbx1.Location = new System.Drawing.Point(44, 173);
             this.Applicant_txtbx1.Name = "Applicant_txtbx1";
             this.Applicant_txtbx1.Size = new System.Drawing.Size(182, 23);
-            this.Applicant_txtbx1.TabIndex = 12;
+            this.Applicant_txtbx1.TabIndex = 1;
             this.Applicant_txtbx1.TextChanged += new System.EventHandler(this.A_Password_TextChanged);
             // 
             // Applicant_chbx1
@@ -127,7 +129,7 @@
             this.Applicant_chbx1.BackColor = System.Drawing.Color.Transparent;
             this.Applicant_chbx1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Applicant_chbx1.ForeColor = System.Drawing.Color.Transparent;
-            this.Applicant_chbx1.Location = new System.Drawing.Point(401, 301);
+            this.Applicant_chbx1.Location = new System.Drawing.Point(400, 352);
             this.Applicant_chbx1.Name = "Applicant_chbx1";
             this.Applicant_chbx1.Size = new System.Drawing.Size(97, 17);
             this.Applicant_chbx1.TabIndex = 14;
@@ -165,7 +167,7 @@
             this.applicant_lbl7.BackColor = System.Drawing.Color.Transparent;
             this.applicant_lbl7.Font = new System.Drawing.Font("Segoe UI", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.applicant_lbl7.ForeColor = System.Drawing.Color.Transparent;
-            this.applicant_lbl7.Location = new System.Drawing.Point(397, 150);
+            this.applicant_lbl7.Location = new System.Drawing.Point(396, 150);
             this.applicant_lbl7.Name = "applicant_lbl7";
             this.applicant_lbl7.Size = new System.Drawing.Size(54, 20);
             this.applicant_lbl7.TabIndex = 17;
@@ -177,7 +179,7 @@
             this.applicant_lbl6.BackColor = System.Drawing.Color.Transparent;
             this.applicant_lbl6.Font = new System.Drawing.Font("Segoe UI", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.applicant_lbl6.ForeColor = System.Drawing.Color.Transparent;
-            this.applicant_lbl6.Location = new System.Drawing.Point(40, 294);
+            this.applicant_lbl6.Location = new System.Drawing.Point(42, 294);
             this.applicant_lbl6.Name = "applicant_lbl6";
             this.applicant_lbl6.Size = new System.Drawing.Size(70, 20);
             this.applicant_lbl6.TabIndex = 18;
@@ -189,7 +191,7 @@
             this.Applicant_txtbx2.Location = new System.Drawing.Point(44, 222);
             this.Applicant_txtbx2.Name = "Applicant_txtbx2";
             this.Applicant_txtbx2.Size = new System.Drawing.Size(182, 23);
-            this.Applicant_txtbx2.TabIndex = 19;
+            this.Applicant_txtbx2.TabIndex = 2;
             // 
             // Applicant_txtbx3
             // 
@@ -197,23 +199,23 @@
             this.Applicant_txtbx3.Location = new System.Drawing.Point(44, 317);
             this.Applicant_txtbx3.Name = "Applicant_txtbx3";
             this.Applicant_txtbx3.Size = new System.Drawing.Size(182, 23);
-            this.Applicant_txtbx3.TabIndex = 20;
+            this.Applicant_txtbx3.TabIndex = 4;
             // 
             // applicant_date1
             // 
             this.applicant_date1.Location = new System.Drawing.Point(44, 271);
             this.applicant_date1.Name = "applicant_date1";
             this.applicant_date1.Size = new System.Drawing.Size(182, 20);
-            this.applicant_date1.TabIndex = 21;
+            this.applicant_date1.TabIndex = 3;
             this.applicant_date1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // Applicant_txtbx5
             // 
             this.Applicant_txtbx5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Applicant_txtbx5.Location = new System.Drawing.Point(401, 222);
+            this.Applicant_txtbx5.Location = new System.Drawing.Point(400, 273);
             this.Applicant_txtbx5.Name = "Applicant_txtbx5";
             this.Applicant_txtbx5.Size = new System.Drawing.Size(182, 23);
-            this.Applicant_txtbx5.TabIndex = 22;
+            this.Applicant_txtbx5.TabIndex = 7;
             this.Applicant_txtbx5.UseSystemPasswordChar = true;
             // 
             // applicant_lbl8
@@ -222,7 +224,7 @@
             this.applicant_lbl8.BackColor = System.Drawing.Color.Transparent;
             this.applicant_lbl8.Font = new System.Drawing.Font("Segoe UI", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.applicant_lbl8.ForeColor = System.Drawing.Color.Transparent;
-            this.applicant_lbl8.Location = new System.Drawing.Point(397, 199);
+            this.applicant_lbl8.Location = new System.Drawing.Point(396, 250);
             this.applicant_lbl8.Name = "applicant_lbl8";
             this.applicant_lbl8.Size = new System.Drawing.Size(81, 20);
             this.applicant_lbl8.TabIndex = 23;
@@ -234,7 +236,7 @@
             this.applicant_lbl9.BackColor = System.Drawing.Color.Transparent;
             this.applicant_lbl9.Font = new System.Drawing.Font("Segoe UI", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.applicant_lbl9.ForeColor = System.Drawing.Color.Transparent;
-            this.applicant_lbl9.Location = new System.Drawing.Point(397, 248);
+            this.applicant_lbl9.Location = new System.Drawing.Point(396, 299);
             this.applicant_lbl9.Name = "applicant_lbl9";
             this.applicant_lbl9.Size = new System.Drawing.Size(137, 20);
             this.applicant_lbl9.TabIndex = 24;
@@ -243,18 +245,18 @@
             // Applicant_txtbx4
             // 
             this.Applicant_txtbx4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Applicant_txtbx4.Location = new System.Drawing.Point(401, 173);
+            this.Applicant_txtbx4.Location = new System.Drawing.Point(400, 173);
             this.Applicant_txtbx4.Name = "Applicant_txtbx4";
             this.Applicant_txtbx4.Size = new System.Drawing.Size(182, 23);
-            this.Applicant_txtbx4.TabIndex = 25;
+            this.Applicant_txtbx4.TabIndex = 5;
             // 
             // Applicant_txtbx6
             // 
             this.Applicant_txtbx6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Applicant_txtbx6.Location = new System.Drawing.Point(401, 271);
+            this.Applicant_txtbx6.Location = new System.Drawing.Point(400, 322);
             this.Applicant_txtbx6.Name = "Applicant_txtbx6";
             this.Applicant_txtbx6.Size = new System.Drawing.Size(182, 23);
-            this.Applicant_txtbx6.TabIndex = 26;
+            this.Applicant_txtbx6.TabIndex = 8;
             this.Applicant_txtbx6.UseSystemPasswordChar = true;
             // 
             // linkLabel1
@@ -263,7 +265,7 @@
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel1.LinkColor = System.Drawing.Color.White;
-            this.linkLabel1.Location = new System.Drawing.Point(66, 369);
+            this.linkLabel1.Location = new System.Drawing.Point(73, 411);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(132, 13);
             this.linkLabel1.TabIndex = 27;
@@ -281,7 +283,7 @@
             this.applicant_btn1.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.applicant_btn1.Image = global::Swift.Properties.Resources.icons8_register_25;
             this.applicant_btn1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.applicant_btn1.Location = new System.Drawing.Point(433, 344);
+            this.applicant_btn1.Location = new System.Drawing.Point(251, 386);
             this.applicant_btn1.Name = "applicant_btn1";
             this.applicant_btn1.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
             this.applicant_btn1.Size = new System.Drawing.Size(130, 38);
@@ -291,12 +293,36 @@
             this.applicant_btn1.UseVisualStyleBackColor = false;
             this.applicant_btn1.Click += new System.EventHandler(this.Button1_Click_1);
             // 
+            // applicant_cmbbx1
+            // 
+            this.applicant_cmbbx1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.applicant_cmbbx1.FormattingEnabled = true;
+            this.applicant_cmbbx1.Location = new System.Drawing.Point(400, 222);
+            this.applicant_cmbbx1.Name = "applicant_cmbbx1";
+            this.applicant_cmbbx1.Size = new System.Drawing.Size(182, 21);
+            this.applicant_cmbbx1.TabIndex = 6;
+            this.applicant_cmbbx1.SelectedIndexChanged += new System.EventHandler(this.applicant_cmbbx1_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label1.ForeColor = System.Drawing.Color.Transparent;
+            this.label1.Location = new System.Drawing.Point(396, 199);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(187, 20);
+            this.label1.TabIndex = 29;
+            this.label1.Text = "Educational Background:";
+            // 
             // Applicant_regis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(711, 450);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.applicant_cmbbx1);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.Applicant_txtbx6);
             this.Controls.Add(this.Applicant_txtbx4);
@@ -351,5 +377,7 @@
         private System.Windows.Forms.TextBox Applicant_txtbx4;
         private System.Windows.Forms.TextBox Applicant_txtbx6;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.ComboBox applicant_cmbbx1;
+        private System.Windows.Forms.Label label1;
     }
 }

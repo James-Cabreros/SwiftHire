@@ -23,6 +23,7 @@ namespace Swift
         {
             InitializeComponent();
             SetBackground();
+            PopulateComboBox();
         }
         private void SetBackground()
         {
@@ -41,6 +42,13 @@ namespace Swift
         private void Applicant_Login_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void PopulateComboBox()
+        {
+            // Assuming these are the job titles
+            string[] jobTitles = { "College Graduate", "Senior High School Graduate", "Undergraduate" };
+            applicant_cmbbx1.Items.AddRange(jobTitles);
         }
 
         private void Button2_Click(object sender, EventArgs e)
@@ -82,7 +90,7 @@ namespace Swift
             }
 
             if (string.IsNullOrEmpty(Applicant_txtbx1.Text) || string.IsNullOrEmpty(Applicant_txtbx2.Text) || string.IsNullOrEmpty(Applicant_txtbx3.Text) ||
-                string.IsNullOrEmpty(Applicant_txtbx4.Text) || string.IsNullOrEmpty(Applicant_txtbx5.Text) || string.IsNullOrEmpty(applicant_date1.Text))
+                string.IsNullOrEmpty(applicant_cmbbx1.Text) || string.IsNullOrEmpty(Applicant_txtbx4.Text) || string.IsNullOrEmpty(Applicant_txtbx5.Text) || string.IsNullOrEmpty(applicant_date1.Text))
             {
                 MessageBox.Show("Please fill all the information", "Error");
             }
@@ -93,12 +101,13 @@ namespace Swift
             else
             {
                 connection.Open();
-                string insertQuery = "INSERT INTO applicant_info (f_name, l_name, address, email, password, b_date) VALUES (@f_name, @l_name, @address, @email, @password, @b_date)";
+                string insertQuery = "INSERT INTO applicant_info (f_name, l_name, address, email, password, b_date, educ_info) VALUES (@f_name, @l_name, @address, @email, @password, @b_date, @educ_info)";
                 command = new MySqlCommand(insertQuery, connection);
                 command.Parameters.AddWithValue("@f_name", Applicant_txtbx1.Text);
                 command.Parameters.AddWithValue("@l_name", Applicant_txtbx2.Text);
                 command.Parameters.AddWithValue("@address", Applicant_txtbx3.Text);
                 command.Parameters.AddWithValue("@email", Applicant_txtbx4.Text);
+                command.Parameters.AddWithValue("@educ_info", applicant_cmbbx1.Text);
                 command.Parameters.AddWithValue("@password", Applicant_txtbx5.Text);
                 command.Parameters.AddWithValue("@b_date", applicant_date1.Value.ToString("yyyy-MM-dd")); // Assuming applicant_date1 is a DateTimePicker
 
@@ -138,6 +147,11 @@ namespace Swift
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void applicant_cmbbx1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
