@@ -28,10 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.employer_lbl1 = new System.Windows.Forms.Label();
             this.employer_datagrdvw1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.employer_txtbx1 = new System.Windows.Forms.TextBox();
             this.employer_txtbx2 = new System.Windows.Forms.TextBox();
@@ -45,11 +51,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.employer_cmbbx1 = new System.Windows.Forms.ComboBox();
             this.employer_btn1 = new System.Windows.Forms.Button();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.employer_btn2 = new System.Windows.Forms.Button();
+            this.employer_btn3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.employer_datagrdvw1)).BeginInit();
             this.SuspendLayout();
@@ -60,7 +63,7 @@
             this.employer_lbl1.BackColor = System.Drawing.Color.Transparent;
             this.employer_lbl1.Font = new System.Drawing.Font("Segoe UI", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.employer_lbl1.ForeColor = System.Drawing.Color.Transparent;
-            this.employer_lbl1.Location = new System.Drawing.Point(282, 9);
+            this.employer_lbl1.Location = new System.Drawing.Point(282, 3);
             this.employer_lbl1.Name = "employer_lbl1";
             this.employer_lbl1.Size = new System.Drawing.Size(243, 32);
             this.employer_lbl1.TabIndex = 0;
@@ -71,14 +74,14 @@
             this.employer_datagrdvw1.AllowUserToAddRows = false;
             this.employer_datagrdvw1.AllowUserToDeleteRows = false;
             this.employer_datagrdvw1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(0)))), ((int)(((byte)(36)))));
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.employer_datagrdvw1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.employer_datagrdvw1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.employer_datagrdvw1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.employer_datagrdvw1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -86,162 +89,28 @@
             this.Column3,
             this.Column4,
             this.Column5});
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.employer_datagrdvw1.DefaultCellStyle = dataGridViewCellStyle16;
-            this.employer_datagrdvw1.Location = new System.Drawing.Point(168, 44);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.employer_datagrdvw1.DefaultCellStyle = dataGridViewCellStyle2;
+            this.employer_datagrdvw1.Location = new System.Drawing.Point(168, 37);
             this.employer_datagrdvw1.Name = "employer_datagrdvw1";
             this.employer_datagrdvw1.ReadOnly = true;
-            this.employer_datagrdvw1.Size = new System.Drawing.Size(459, 416);
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.employer_datagrdvw1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.employer_datagrdvw1.Size = new System.Drawing.Size(459, 466);
             this.employer_datagrdvw1.TabIndex = 1;
             this.employer_datagrdvw1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label1.ForeColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(12, 21);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(31, 21);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "ID:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // employer_txtbx1
-            // 
-            this.employer_txtbx1.Location = new System.Drawing.Point(12, 45);
-            this.employer_txtbx1.Name = "employer_txtbx1";
-            this.employer_txtbx1.Size = new System.Drawing.Size(139, 20);
-            this.employer_txtbx1.TabIndex = 3;
-            this.employer_txtbx1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // employer_txtbx2
-            // 
-            this.employer_txtbx2.Location = new System.Drawing.Point(12, 92);
-            this.employer_txtbx2.Name = "employer_txtbx2";
-            this.employer_txtbx2.ReadOnly = true;
-            this.employer_txtbx2.Size = new System.Drawing.Size(139, 20);
-            this.employer_txtbx2.TabIndex = 5;
-            this.employer_txtbx2.TextChanged += new System.EventHandler(this.employer_txtbx2_TextChanged);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label2.ForeColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(12, 68);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 21);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Job Title:";
-            // 
-            // employer_txtbx3
-            // 
-            this.employer_txtbx3.Location = new System.Drawing.Point(12, 139);
-            this.employer_txtbx3.Name = "employer_txtbx3";
-            this.employer_txtbx3.ReadOnly = true;
-            this.employer_txtbx3.Size = new System.Drawing.Size(139, 20);
-            this.employer_txtbx3.TabIndex = 7;
-            this.employer_txtbx3.TextChanged += new System.EventHandler(this.employer_txtbx3_TextChanged);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label3.ForeColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(12, 115);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(131, 21);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Applicant Name:";
-            // 
-            // employer_txtbx4
-            // 
-            this.employer_txtbx4.Location = new System.Drawing.Point(12, 205);
-            this.employer_txtbx4.Name = "employer_txtbx4";
-            this.employer_txtbx4.ReadOnly = true;
-            this.employer_txtbx4.Size = new System.Drawing.Size(139, 20);
-            this.employer_txtbx4.TabIndex = 9;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label4.ForeColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(12, 160);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(100, 42);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Contact \r\nInformation:";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // employer_txtbx5
-            // 
-            this.employer_txtbx5.Location = new System.Drawing.Point(12, 250);
-            this.employer_txtbx5.Name = "employer_txtbx5";
-            this.employer_txtbx5.ReadOnly = true;
-            this.employer_txtbx5.Size = new System.Drawing.Size(139, 20);
-            this.employer_txtbx5.TabIndex = 11;
-            this.employer_txtbx5.TextChanged += new System.EventHandler(this.employer_txtbx5_TextChanged);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label5.ForeColor = System.Drawing.Color.Transparent;
-            this.label5.Location = new System.Drawing.Point(10, 226);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(113, 21);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "CV or Resume:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label6.ForeColor = System.Drawing.Color.Transparent;
-            this.label6.Location = new System.Drawing.Point(9, 304);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(105, 21);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "Select Status:";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
-            // 
-            // employer_cmbbx1
-            // 
-            this.employer_cmbbx1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.employer_cmbbx1.FormattingEnabled = true;
-            this.employer_cmbbx1.Location = new System.Drawing.Point(12, 328);
-            this.employer_cmbbx1.Name = "employer_cmbbx1";
-            this.employer_cmbbx1.Size = new System.Drawing.Size(139, 21);
-            this.employer_cmbbx1.TabIndex = 13;
-            this.employer_cmbbx1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // employer_btn1
-            // 
-            this.employer_btn1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(0)))), ((int)(((byte)(36)))));
-            this.employer_btn1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.employer_btn1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.employer_btn1.ForeColor = System.Drawing.Color.Transparent;
-            this.employer_btn1.Location = new System.Drawing.Point(12, 278);
-            this.employer_btn1.Name = "employer_btn1";
-            this.employer_btn1.Size = new System.Drawing.Size(139, 23);
-            this.employer_btn1.TabIndex = 14;
-            this.employer_btn1.Text = "Save";
-            this.employer_btn1.UseVisualStyleBackColor = false;
-            this.employer_btn1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Column1
             // 
@@ -257,7 +126,7 @@
             this.Column2.HeaderText = "Job Title";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
-            this.Column2.Width = 76;
+            this.Column2.Width = 70;
             // 
             // Column3
             // 
@@ -265,7 +134,7 @@
             this.Column3.HeaderText = "Full Name";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
-            this.Column3.Width = 85;
+            this.Column3.Width = 79;
             // 
             // Column4
             // 
@@ -282,19 +151,189 @@
             this.Column5.ReadOnly = true;
             this.Column5.Width = 46;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label1.ForeColor = System.Drawing.Color.Transparent;
+            this.label1.Location = new System.Drawing.Point(12, 77);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(31, 21);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "ID:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // employer_txtbx1
+            // 
+            this.employer_txtbx1.Location = new System.Drawing.Point(12, 101);
+            this.employer_txtbx1.Name = "employer_txtbx1";
+            this.employer_txtbx1.Size = new System.Drawing.Size(139, 20);
+            this.employer_txtbx1.TabIndex = 3;
+            this.employer_txtbx1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // employer_txtbx2
+            // 
+            this.employer_txtbx2.Location = new System.Drawing.Point(12, 148);
+            this.employer_txtbx2.Name = "employer_txtbx2";
+            this.employer_txtbx2.ReadOnly = true;
+            this.employer_txtbx2.Size = new System.Drawing.Size(139, 20);
+            this.employer_txtbx2.TabIndex = 5;
+            this.employer_txtbx2.TextChanged += new System.EventHandler(this.employer_txtbx2_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label2.ForeColor = System.Drawing.Color.Transparent;
+            this.label2.Location = new System.Drawing.Point(12, 124);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(75, 21);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Job Title:";
+            // 
+            // employer_txtbx3
+            // 
+            this.employer_txtbx3.Location = new System.Drawing.Point(12, 195);
+            this.employer_txtbx3.Name = "employer_txtbx3";
+            this.employer_txtbx3.ReadOnly = true;
+            this.employer_txtbx3.Size = new System.Drawing.Size(139, 20);
+            this.employer_txtbx3.TabIndex = 7;
+            this.employer_txtbx3.TextChanged += new System.EventHandler(this.employer_txtbx3_TextChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label3.ForeColor = System.Drawing.Color.Transparent;
+            this.label3.Location = new System.Drawing.Point(12, 171);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(131, 21);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Applicant Name:";
+            // 
+            // employer_txtbx4
+            // 
+            this.employer_txtbx4.Location = new System.Drawing.Point(12, 264);
+            this.employer_txtbx4.Name = "employer_txtbx4";
+            this.employer_txtbx4.ReadOnly = true;
+            this.employer_txtbx4.Size = new System.Drawing.Size(139, 20);
+            this.employer_txtbx4.TabIndex = 9;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label4.ForeColor = System.Drawing.Color.Transparent;
+            this.label4.Location = new System.Drawing.Point(12, 219);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(100, 42);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Contact \r\nInformation:";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // employer_txtbx5
+            // 
+            this.employer_txtbx5.Location = new System.Drawing.Point(12, 309);
+            this.employer_txtbx5.Name = "employer_txtbx5";
+            this.employer_txtbx5.ReadOnly = true;
+            this.employer_txtbx5.Size = new System.Drawing.Size(139, 20);
+            this.employer_txtbx5.TabIndex = 11;
+            this.employer_txtbx5.TextChanged += new System.EventHandler(this.employer_txtbx5_TextChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label5.ForeColor = System.Drawing.Color.Transparent;
+            this.label5.Location = new System.Drawing.Point(10, 285);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(113, 21);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "CV or Resume:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label6.ForeColor = System.Drawing.Color.Transparent;
+            this.label6.Location = new System.Drawing.Point(9, 363);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(105, 21);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Select Status:";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // employer_cmbbx1
+            // 
+            this.employer_cmbbx1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.employer_cmbbx1.FormattingEnabled = true;
+            this.employer_cmbbx1.Location = new System.Drawing.Point(12, 384);
+            this.employer_cmbbx1.Name = "employer_cmbbx1";
+            this.employer_cmbbx1.Size = new System.Drawing.Size(139, 21);
+            this.employer_cmbbx1.TabIndex = 13;
+            this.employer_cmbbx1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // employer_btn1
+            // 
+            this.employer_btn1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(0)))), ((int)(((byte)(36)))));
+            this.employer_btn1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.employer_btn1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.employer_btn1.ForeColor = System.Drawing.Color.Transparent;
+            this.employer_btn1.Location = new System.Drawing.Point(12, 337);
+            this.employer_btn1.Name = "employer_btn1";
+            this.employer_btn1.Size = new System.Drawing.Size(139, 23);
+            this.employer_btn1.TabIndex = 14;
+            this.employer_btn1.Text = "Save";
+            this.employer_btn1.UseVisualStyleBackColor = false;
+            this.employer_btn1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // employer_btn2
+            // 
+            this.employer_btn2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(0)))), ((int)(((byte)(36)))));
+            this.employer_btn2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.employer_btn2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.employer_btn2.ForeColor = System.Drawing.Color.Transparent;
+            this.employer_btn2.Location = new System.Drawing.Point(14, 417);
+            this.employer_btn2.Name = "employer_btn2";
+            this.employer_btn2.Size = new System.Drawing.Size(139, 40);
+            this.employer_btn2.TabIndex = 15;
+            this.employer_btn2.Text = "Send";
+            this.employer_btn2.UseVisualStyleBackColor = false;
+            this.employer_btn2.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // employer_btn3
+            // 
+            this.employer_btn3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(0)))), ((int)(((byte)(36)))));
+            this.employer_btn3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.employer_btn3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.employer_btn3.ForeColor = System.Drawing.Color.Transparent;
+            this.employer_btn3.Location = new System.Drawing.Point(12, 37);
+            this.employer_btn3.Name = "employer_btn3";
+            this.employer_btn3.Size = new System.Drawing.Size(139, 40);
+            this.employer_btn3.TabIndex = 16;
+            this.employer_btn3.Text = "Refresh Table";
+            this.employer_btn3.UseVisualStyleBackColor = false;
+            this.employer_btn3.Click += new System.EventHandler(this.button2_Click);
+            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(0)))), ((int)(((byte)(36)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Location = new System.Drawing.Point(12, 358);
+            this.button1.Location = new System.Drawing.Point(16, 463);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(139, 47);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "Send";
+            this.button1.Size = new System.Drawing.Size(139, 40);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "Delete Inquiry";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.button1.Click += new System.EventHandler(this.button1_Click_2);
             // 
             // Employer_notif
             // 
@@ -303,6 +342,8 @@
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(655, 550);
             this.Controls.Add(this.button1);
+            this.Controls.Add(this.employer_btn3);
+            this.Controls.Add(this.employer_btn2);
             this.Controls.Add(this.employer_btn1);
             this.Controls.Add(this.employer_cmbbx1);
             this.Controls.Add(this.label6);
@@ -350,6 +391,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.Button employer_btn2;
+        private System.Windows.Forms.Button employer_btn3;
         private System.Windows.Forms.Button button1;
     }
 }

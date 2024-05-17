@@ -9,12 +9,14 @@ namespace Swift
     public partial class applicant_notif : Form
     {
         MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;username=root;password=;database=SwiftHire");
-
+        MySqlCommand command;
+        MySqlDataReader reader;
         public applicant_notif()
         {
             InitializeComponent();
             SetBackground();
             LoadData();
+           
         }
 
         private void SetBackground()
@@ -32,19 +34,20 @@ namespace Swift
             graphics.FillRectangle(gradientBrush, this.ClientRectangle);
         }
 
+
         private void LoadData()
         {
-            if (Applicant_Datagrdvw1 == null)
+            if (applicant_datagrdvw1 == null)
             {
                 MessageBox.Show("Applicant_Datagrdvw1 is not initialized.");
                 return;
             }
 
-            Applicant_Datagrdvw1.Rows.Clear();
+            applicant_datagrdvw1.Rows.Clear();
             try
             {
                 connection.Open();
-                string selectQuery = "SELECT id, job_title, fullname, contact_info, CV_resume FROM job_inquiries";
+                string selectQuery = "SELECT id, job_title, fullname, Status FROM applicant_notif";
 
                 using (var command = new MySqlCommand(selectQuery, connection))
                 {
@@ -54,10 +57,8 @@ namespace Swift
                         {
                             string jobTitle = reader["job_title"].ToString();
                             string fullName = reader["fullname"].ToString();
-                            string contactInfo = reader["contact_info"].ToString();
-                            string cvResume = reader["CV_resume"].ToString(); // Retrieve CV_resume column
-
-                            Applicant_Datagrdvw1.Rows.Add(Applicant_Datagrdvw1.Rows.Count + 1, jobTitle, fullName, contactInfo, cvResume);
+                            string status = reader["Status"].ToString();
+                            applicant_datagrdvw1.Rows.Add(applicant_datagrdvw1.Rows.Count + 1, jobTitle, fullName, status);
                         }
                     }
                 }
@@ -71,20 +72,46 @@ namespace Swift
                 connection.Close();
             }
         }
-
         private void applicant_notif_Load(object sender, EventArgs e)
         {
-            // Event handler for form load
+            
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (Applicant_Datagrdvw1.CurrentRow != null)
+            if (applicant_datagrdvw1.CurrentRow != null)
             {
-                Applicant_Datagrdvw1.CurrentRow.Cells[1].Value.ToString();
-                Applicant_Datagrdvw1.CurrentRow.Cells[2].Value.ToString();
-                Applicant_Datagrdvw1.CurrentRow.Cells[3].Value.ToString();
+                applicant_datagrdvw1.CurrentRow.Cells[1].Value.ToString();
+                applicant_datagrdvw1.CurrentRow.Cells[2].Value.ToString();
+                applicant_datagrdvw1.CurrentRow.Cells[3].Value.ToString();
             }
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            {
+                applicant_datagrdvw1.Rows.Clear();
+                connection.Open();
+                command = new MySqlCommand("SELECT job_title, fullname, Status FROM applicant_notif WHERE job_title LIKE @searchText OR fullname LIKE @searchText OR Status LIKE @searchText", connection);
+                command.Parameters.Clear();
+                command.Parameters.AddWithValue("@searchText", "%" + applicant_txtbx1.Text + "%");
+                reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    applicant_datagrdvw1.Rows.Add(applicant_datagrdvw1.Rows.Count + 1, 
+                   reader["job_title"].ToString(), 
+                   reader["fullname"].ToString(),
+                   reader["Status"].ToString());
+                }
+                reader.Close();
+                connection.Close();
+            }
+        }
+       
     }
 }

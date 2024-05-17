@@ -78,7 +78,7 @@
             this.Applicant_Datagrdvw1.Name = "Applicant_Datagrdvw1";
             this.Applicant_Datagrdvw1.ReadOnly = true;
             this.Applicant_Datagrdvw1.RowHeadersVisible = false;
-            this.Applicant_Datagrdvw1.Size = new System.Drawing.Size(459, 416);
+            this.Applicant_Datagrdvw1.Size = new System.Drawing.Size(459, 458);
             this.Applicant_Datagrdvw1.TabIndex = 2;
             this.Applicant_Datagrdvw1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -119,7 +119,7 @@
             this.Applicant_btn1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Applicant_btn1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.Applicant_btn1.ForeColor = System.Drawing.Color.Transparent;
-            this.Applicant_btn1.Location = new System.Drawing.Point(12, 378);
+            this.Applicant_btn1.Location = new System.Drawing.Point(12, 419);
             this.Applicant_btn1.Name = "Applicant_btn1";
             this.Applicant_btn1.Size = new System.Drawing.Size(140, 42);
             this.Applicant_btn1.TabIndex = 3;
@@ -149,7 +149,7 @@
             // 
             // applicant_txtbx2
             // 
-            this.applicant_txtbx2.Location = new System.Drawing.Point(12, 56);
+            this.applicant_txtbx2.Location = new System.Drawing.Point(12, 79);
             this.applicant_txtbx2.Name = "applicant_txtbx2";
             this.applicant_txtbx2.Size = new System.Drawing.Size(140, 20);
             this.applicant_txtbx2.TabIndex = 6;
@@ -161,7 +161,7 @@
             this.applicant_lbl2.BackColor = System.Drawing.Color.Transparent;
             this.applicant_lbl2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.applicant_lbl2.ForeColor = System.Drawing.Color.Transparent;
-            this.applicant_lbl2.Location = new System.Drawing.Point(14, 32);
+            this.applicant_lbl2.Location = new System.Drawing.Point(14, 53);
             this.applicant_lbl2.Name = "applicant_lbl2";
             this.applicant_lbl2.Size = new System.Drawing.Size(31, 21);
             this.applicant_lbl2.TabIndex = 7;
@@ -169,7 +169,7 @@
             // 
             // applicant_txtbx3
             // 
-            this.applicant_txtbx3.Location = new System.Drawing.Point(12, 109);
+            this.applicant_txtbx3.Location = new System.Drawing.Point(12, 126);
             this.applicant_txtbx3.Name = "applicant_txtbx3";
             this.applicant_txtbx3.Size = new System.Drawing.Size(140, 20);
             this.applicant_txtbx3.TabIndex = 8;
@@ -181,7 +181,7 @@
             this.applicant_lbl3.BackColor = System.Drawing.Color.Transparent;
             this.applicant_lbl3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.applicant_lbl3.ForeColor = System.Drawing.Color.Transparent;
-            this.applicant_lbl3.Location = new System.Drawing.Point(14, 79);
+            this.applicant_lbl3.Location = new System.Drawing.Point(13, 101);
             this.applicant_lbl3.Name = "applicant_lbl3";
             this.applicant_lbl3.Size = new System.Drawing.Size(71, 21);
             this.applicant_lbl3.TabIndex = 9;
@@ -193,7 +193,7 @@
             this.applicant_btn2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.applicant_btn2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.applicant_btn2.ForeColor = System.Drawing.Color.Transparent;
-            this.applicant_btn2.Location = new System.Drawing.Point(12, 427);
+            this.applicant_btn2.Location = new System.Drawing.Point(12, 467);
             this.applicant_btn2.Name = "applicant_btn2";
             this.applicant_btn2.Size = new System.Drawing.Size(140, 42);
             this.applicant_btn2.TabIndex = 10;
@@ -207,7 +207,7 @@
             this.applicant_lbl4.BackColor = System.Drawing.Color.Transparent;
             this.applicant_lbl4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.applicant_lbl4.ForeColor = System.Drawing.Color.Transparent;
-            this.applicant_lbl4.Location = new System.Drawing.Point(14, 132);
+            this.applicant_lbl4.Location = new System.Drawing.Point(14, 150);
             this.applicant_lbl4.Name = "applicant_lbl4";
             this.applicant_lbl4.Size = new System.Drawing.Size(88, 21);
             this.applicant_lbl4.TabIndex = 12;
@@ -215,14 +215,14 @@
             // 
             // applicant_txtbx4
             // 
-            this.applicant_txtbx4.Location = new System.Drawing.Point(12, 156);
+            this.applicant_txtbx4.Location = new System.Drawing.Point(12, 174);
             this.applicant_txtbx4.Name = "applicant_txtbx4";
             this.applicant_txtbx4.Size = new System.Drawing.Size(140, 20);
             this.applicant_txtbx4.TabIndex = 14;
             // 
             // applicant_rtxtbx1
             // 
-            this.applicant_rtxtbx1.Location = new System.Drawing.Point(12, 274);
+            this.applicant_rtxtbx1.Location = new System.Drawing.Point(12, 294);
             this.applicant_rtxtbx1.Name = "applicant_rtxtbx1";
             this.applicant_rtxtbx1.Size = new System.Drawing.Size(140, 32);
             this.applicant_rtxtbx1.TabIndex = 16;
@@ -234,7 +234,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label2.ForeColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(14, 243);
+            this.label2.Location = new System.Drawing.Point(12, 264);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(90, 21);
             this.label2.TabIndex = 17;
@@ -246,7 +246,7 @@
             this.Applicant_btn3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Applicant_btn3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.Applicant_btn3.ForeColor = System.Drawing.Color.Transparent;
-            this.Applicant_btn3.Location = new System.Drawing.Point(12, 313);
+            this.Applicant_btn3.Location = new System.Drawing.Point(12, 333);
             this.Applicant_btn3.Name = "Applicant_btn3";
             this.Applicant_btn3.Size = new System.Drawing.Size(140, 42);
             this.Applicant_btn3.TabIndex = 18;
@@ -260,7 +260,7 @@
             // 
             // applicant_txtbx5
             // 
-            this.applicant_txtbx5.Location = new System.Drawing.Point(12, 221);
+            this.applicant_txtbx5.Location = new System.Drawing.Point(12, 241);
             this.applicant_txtbx5.Name = "applicant_txtbx5";
             this.applicant_txtbx5.Size = new System.Drawing.Size(140, 20);
             this.applicant_txtbx5.TabIndex = 20;
@@ -271,7 +271,7 @@
             this.applicant_lbl5.BackColor = System.Drawing.Color.Transparent;
             this.applicant_lbl5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.applicant_lbl5.ForeColor = System.Drawing.Color.Transparent;
-            this.applicant_lbl5.Location = new System.Drawing.Point(14, 176);
+            this.applicant_lbl5.Location = new System.Drawing.Point(14, 195);
             this.applicant_lbl5.Name = "applicant_lbl5";
             this.applicant_lbl5.Size = new System.Drawing.Size(100, 42);
             this.applicant_lbl5.TabIndex = 19;

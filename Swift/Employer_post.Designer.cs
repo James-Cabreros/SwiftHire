@@ -109,7 +109,7 @@
             this.employer_btn1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.employer_btn1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.employer_btn1.ForeColor = System.Drawing.Color.Transparent;
-            this.employer_btn1.Location = new System.Drawing.Point(51, 315);
+            this.employer_btn1.Location = new System.Drawing.Point(51, 342);
             this.employer_btn1.Name = "employer_btn1";
             this.employer_btn1.Size = new System.Drawing.Size(156, 47);
             this.employer_btn1.TabIndex = 7;
@@ -147,7 +147,7 @@
             this.Employer_datagrdvw1.Location = new System.Drawing.Point(239, 69);
             this.Employer_datagrdvw1.Name = "Employer_datagrdvw1";
             this.Employer_datagrdvw1.ReadOnly = true;
-            this.Employer_datagrdvw1.Size = new System.Drawing.Size(391, 410);
+            this.Employer_datagrdvw1.Size = new System.Drawing.Size(391, 432);
             this.Employer_datagrdvw1.TabIndex = 8;
             this.Employer_datagrdvw1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Employer_datagrdvw1_CellContentClick_1);
             // 
@@ -188,7 +188,7 @@
             this.employer_btn2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.employer_btn2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.employer_btn2.ForeColor = System.Drawing.Color.Transparent;
-            this.employer_btn2.Location = new System.Drawing.Point(51, 373);
+            this.employer_btn2.Location = new System.Drawing.Point(51, 398);
             this.employer_btn2.Name = "employer_btn2";
             this.employer_btn2.Size = new System.Drawing.Size(156, 47);
             this.employer_btn2.TabIndex = 9;
@@ -202,7 +202,7 @@
             this.employer_btn3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.employer_btn3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.employer_btn3.ForeColor = System.Drawing.Color.Transparent;
-            this.employer_btn3.Location = new System.Drawing.Point(51, 431);
+            this.employer_btn3.Location = new System.Drawing.Point(51, 454);
             this.employer_btn3.Name = "employer_btn3";
             this.employer_btn3.Size = new System.Drawing.Size(156, 47);
             this.employer_btn3.TabIndex = 10;

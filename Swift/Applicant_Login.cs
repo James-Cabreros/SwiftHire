@@ -64,7 +64,7 @@ namespace Swift
         {
          if (string.IsNullOrEmpty(applicant_txtbx1.Text) || string.IsNullOrEmpty(applicant_txtbx2.Text))
          {
-         MessageBox.Show("Please input Username and Password", "Error");
+         MessageBox.Show("Please input Username and Password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
         else
         {

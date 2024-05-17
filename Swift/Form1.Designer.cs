@@ -101,9 +101,9 @@
             this.Sign_lbl.ForeColor = System.Drawing.Color.Transparent;
             this.Sign_lbl.Location = new System.Drawing.Point(339, 141);
             this.Sign_lbl.Name = "Sign_lbl";
-            this.Sign_lbl.Size = new System.Drawing.Size(112, 30);
+            this.Sign_lbl.Size = new System.Drawing.Size(122, 30);
             this.Sign_lbl.TabIndex = 4;
-            this.Sign_lbl.Text = "Sign-in as:";
+            this.Sign_lbl.Text = "Register as:";
             // 
             // panel1
             // 

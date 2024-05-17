@@ -16,7 +16,8 @@ namespace Swift
     public partial class Employer_notif : Form
     {
         MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;username=root;password=;database=SwiftHire");
-        MySqlDataReader reader;
+       
+        MySqlCommand command;
         public Employer_notif()
         {
             InitializeComponent(); 
@@ -107,22 +108,30 @@ namespace Swift
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
             if (!string.IsNullOrEmpty(employer_txtbx1.Text))
             {
                 try
                 {
                     connection.Open();
-                    string selectQuery = "SELECT id, job_title, fullname, contact_info, CV_resume FROM job_inquiries WHERE id=@id LIKE @searchtext";
+                    string selectQuery = "SELECT id, job_title, fullname, contact_info, CV_resume FROM job_inquiries WHERE id=@id";
                     MySqlCommand command = new MySqlCommand(selectQuery, connection);
                     command.Parameters.AddWithValue("@id", Convert.ToInt32(employer_txtbx1.Text));
                     MySqlDataReader reader = command.ExecuteReader();
 
+                    // Clear the DataGridView before adding new rows
                     employer_datagrdvw1.Rows.Clear();
 
                     if (reader.Read())
                     {
-                        employer_txtbx1.Text = reader["id"].ToString();
+                        // Add the found record to the DataGridView
+                        employer_datagrdvw1.Rows.Add(
+                            reader["id"].ToString(),
+                            reader["job_title"].ToString(),
+                            reader["fullname"].ToString(),
+                            reader["contact_info"].ToString(),
+                            reader["CV_resume"].ToString());
+
+                        // Populate the textboxes with the found record
                         employer_txtbx2.Text = reader["job_title"].ToString();
                         employer_txtbx3.Text = reader["fullname"].ToString();
                         employer_txtbx4.Text = reader["contact_info"].ToString();
@@ -132,11 +141,11 @@ namespace Swift
                         File.WriteAllBytes(cvFilePath, cvData);
 
                         employer_txtbx5.Text = cvFilePath; // Display the file path in the TextBox (or use a Label)
+                        employer_txtbx5.ReadOnly = true; // Make the TextBox read-only
                     }
                     else
                     {
                         // Clear all TextBoxes if no record found for the given ID
-                        employer_txtbx1.Text = "";
                         employer_txtbx2.Text = "";
                         employer_txtbx3.Text = "";
                         employer_txtbx4.Text = "";
@@ -155,9 +164,18 @@ namespace Swift
                     connection.Close();
                 }
             }
+            else
+            {
+                // Clear the DataGridView and TextBoxes if the TextBox is empty
+                employer_datagrdvw1.Rows.Clear();
+                employer_txtbx2.Text = "";
+                employer_txtbx3.Text = "";
+                employer_txtbx4.Text = "";
+                employer_txtbx5.Text = "";
+            }
         }
 
-        private void label4_Click(object sender, EventArgs e)
+            private void label4_Click(object sender, EventArgs e)
         {
 
         }
@@ -205,7 +223,76 @@ namespace Swift
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(employer_txtbx2.Text) || string.IsNullOrEmpty(employer_txtbx3.Text) || string.IsNullOrEmpty(employer_cmbbx1.Text))
+            {
+                MessageBox.Show("Please fill in all fields.", "Error");
+            }
+            else
+            {
+                try
+                {
+                    connection.Open();
+                    string insertQuery = "INSERT INTO `applicant_notif`(`job_title`, `fullname`,`Status`) VALUES (@JobTitle, @FullName, @Status)";
+                    command = new MySqlCommand(insertQuery, connection);
+                    command.Parameters.AddWithValue("@JobTitle", employer_txtbx2.Text);
+                    command.Parameters.AddWithValue("@FullName", employer_txtbx3.Text);
+                    command.Parameters.AddWithValue("@Status", employer_cmbbx1.Text);
+                    command.ExecuteNonQuery();
 
+                    MessageBox.Show("Data inserted successfully!");
+                    connection.Close();
+                }
+                
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred: " + ex.Message, "Error");
+                }
+                finally
+                {
+                    connection.Close();
+                }
+            }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            LoadData();
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            try
+            {
+                connection.Open();
+                string deleteQuery = "DELETE FROM `job_inquiries` WHERE `id`=@id";
+                command = new MySqlCommand(deleteQuery, connection);
+                command.Parameters.AddWithValue("@id",Convert.ToInt32 (employer_txtbx1.Text));
+                int rowsAffected = command.ExecuteNonQuery();
+                connection.Close();
+
+                if (rowsAffected > 0)
+                {
+                    MessageBox.Show("Record deleted successfully.");
+                    LoadData();
+                    clearFields();
+                }
+                else
+                {
+                    MessageBox.Show("Failed to delete record.");
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+        private void clearFields()
+        {
+            employer_txtbx1.Clear();
+            employer_cmbbx1.SelectedIndex = -1; // Clear the ComboBox selection
+            employer_txtbx2.Clear();
+            employer_txtbx3.Clear();
+        }
+
     }
 }
