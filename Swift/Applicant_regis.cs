@@ -40,7 +40,7 @@ namespace Swift
 
         private void Applicant_Login_Load(object sender, EventArgs e)
         {
-            // No code needed here for now
+            
         }
 
         private void Button2_Click(object sender, EventArgs e)
@@ -68,19 +68,32 @@ namespace Swift
             int userCount = Convert.ToInt32(command.ExecuteScalar());
             connection.Close();
 
+            Applicant_txtbx1.Text = "";
+            Applicant_txtbx2.Text = "";
+            Applicant_txtbx3.Text = "";
+
+
+
             if (userCount >= 1)
             {
                 MessageBox.Show("Sorry, registration is closed. Maximum number of users reached.");
                 return;
+               
             }
 
             if (string.IsNullOrEmpty(Applicant_txtbx1.Text) || string.IsNullOrEmpty(Applicant_txtbx2.Text) || string.IsNullOrEmpty(Applicant_txtbx3.Text))
             {
                 MessageBox.Show("Please fill all the information", "Error");
+                Applicant_txtbx1.Text = "";
+                Applicant_txtbx2.Text = "";
+                Applicant_txtbx3.Text = "";
             }
             else if (Applicant_txtbx2.Text != Applicant_txtbx3.Text)
             {
                 MessageBox.Show("Passwords do not match", "Error");
+                Applicant_txtbx1.Text = "";
+                Applicant_txtbx2.Text = "";
+                Applicant_txtbx3.Text = "";
             }
             else
             {
@@ -94,7 +107,12 @@ namespace Swift
                 connection.Close();
 
                 MessageBox.Show("Registration Successful! You can now login.");
+
+                Applicant_txtbx1.Text = ""; 
+                Applicant_txtbx2.Text = "";
+                Applicant_txtbx3.Text = "";
             }
+            
         }
 
         private void Applicant_chbx1_CheckedChanged(object sender, EventArgs e)

@@ -62,16 +62,16 @@ namespace Swift
 
         private void Applicant_btn1_Click(object sender, EventArgs e)
         {
-         if (string.IsNullOrEmpty(applicant_txtbx1.Text) || string.IsNullOrEmpty(applicant_txtbx2.Text))
-         {
-         MessageBox.Show("Please input Username and Password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        }
+             if (string.IsNullOrEmpty(applicant_txtbx1.Text) || string.IsNullOrEmpty(applicant_txtbx2.Text))
+             {
+             MessageBox.Show("Please input Username and Password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         else
         {
             try
             {
              connection.Open();
-            string selectQuery = "SELECT * FROM `applicant_info` WHERE f_name = @username AND password = @password";
+            string selectQuery = "SELECT * FROM `applicant_info` WHERE username = @username AND password = @password";
             command = new MySqlCommand(selectQuery, connection);
             command.Parameters.AddWithValue("@username", applicant_txtbx1.Text);
             command.Parameters.AddWithValue("@password", applicant_txtbx2.Text);
@@ -87,22 +87,24 @@ namespace Swift
                 this.Hide();
                 Applicant_Form form2 = new Applicant_Form();
                 form2.ShowDialog();
-            }
+                        applicant_txtbx1.Text = "";
+                        applicant_txtbx2.Text = "";
+                    }
             else
             {
                 MessageBox.Show("Invalid username or password");
             }
         }
-        catch (Exception ex)
-        {
-            MessageBox.Show("Error: " + ex.Message);
-        }
-        finally
-        {
-            connection.Close();
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
         }
     }
-}
 
         private void applicant_txtbx1_TextChanged(object sender, EventArgs e)
         {

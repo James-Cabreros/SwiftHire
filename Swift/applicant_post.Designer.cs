@@ -122,7 +122,7 @@
             this.Applicant_btn1.Location = new System.Drawing.Point(12, 419);
             this.Applicant_btn1.Name = "Applicant_btn1";
             this.Applicant_btn1.Size = new System.Drawing.Size(140, 42);
-            this.Applicant_btn1.TabIndex = 3;
+            this.Applicant_btn1.TabIndex = 11;
             this.Applicant_btn1.Text = "Apply";
             this.Applicant_btn1.UseVisualStyleBackColor = false;
             this.Applicant_btn1.Click += new System.EventHandler(this.button1_Click);
@@ -141,17 +141,21 @@
             // 
             // applicant_txtbx1
             // 
+            this.applicant_txtbx1.BackColor = System.Drawing.SystemColors.Control;
+            this.applicant_txtbx1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.applicant_txtbx1.Location = new System.Drawing.Point(262, 26);
             this.applicant_txtbx1.Name = "applicant_txtbx1";
-            this.applicant_txtbx1.Size = new System.Drawing.Size(369, 20);
+            this.applicant_txtbx1.Size = new System.Drawing.Size(369, 22);
             this.applicant_txtbx1.TabIndex = 5;
             this.applicant_txtbx1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // applicant_txtbx2
             // 
+            this.applicant_txtbx2.BackColor = System.Drawing.SystemColors.Control;
+            this.applicant_txtbx2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.applicant_txtbx2.Location = new System.Drawing.Point(12, 79);
             this.applicant_txtbx2.Name = "applicant_txtbx2";
-            this.applicant_txtbx2.Size = new System.Drawing.Size(140, 20);
+            this.applicant_txtbx2.Size = new System.Drawing.Size(140, 22);
             this.applicant_txtbx2.TabIndex = 6;
             this.applicant_txtbx2.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             // 
@@ -169,10 +173,12 @@
             // 
             // applicant_txtbx3
             // 
+            this.applicant_txtbx3.BackColor = System.Drawing.SystemColors.Control;
+            this.applicant_txtbx3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.applicant_txtbx3.Location = new System.Drawing.Point(12, 126);
             this.applicant_txtbx3.Name = "applicant_txtbx3";
-            this.applicant_txtbx3.Size = new System.Drawing.Size(140, 20);
-            this.applicant_txtbx3.TabIndex = 8;
+            this.applicant_txtbx3.Size = new System.Drawing.Size(140, 22);
+            this.applicant_txtbx3.TabIndex = 7;
             this.applicant_txtbx3.TextChanged += new System.EventHandler(this.applicant_txtbx3_TextChanged);
             // 
             // applicant_lbl3
@@ -196,7 +202,7 @@
             this.applicant_btn2.Location = new System.Drawing.Point(12, 467);
             this.applicant_btn2.Name = "applicant_btn2";
             this.applicant_btn2.Size = new System.Drawing.Size(140, 42);
-            this.applicant_btn2.TabIndex = 10;
+            this.applicant_btn2.TabIndex = 12;
             this.applicant_btn2.Text = "Refresh Table";
             this.applicant_btn2.UseVisualStyleBackColor = false;
             this.applicant_btn2.Click += new System.EventHandler(this.applicant_btn2_Click);
@@ -215,13 +221,17 @@
             // 
             // applicant_txtbx4
             // 
+            this.applicant_txtbx4.BackColor = System.Drawing.SystemColors.Control;
+            this.applicant_txtbx4.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.applicant_txtbx4.Location = new System.Drawing.Point(12, 174);
             this.applicant_txtbx4.Name = "applicant_txtbx4";
-            this.applicant_txtbx4.Size = new System.Drawing.Size(140, 20);
-            this.applicant_txtbx4.TabIndex = 14;
+            this.applicant_txtbx4.Size = new System.Drawing.Size(140, 22);
+            this.applicant_txtbx4.TabIndex = 8;
             // 
             // applicant_rtxtbx1
             // 
+            this.applicant_rtxtbx1.BackColor = System.Drawing.SystemColors.Control;
+            this.applicant_rtxtbx1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.applicant_rtxtbx1.Location = new System.Drawing.Point(12, 294);
             this.applicant_rtxtbx1.Name = "applicant_rtxtbx1";
             this.applicant_rtxtbx1.Size = new System.Drawing.Size(140, 32);
@@ -249,7 +259,7 @@
             this.Applicant_btn3.Location = new System.Drawing.Point(12, 333);
             this.Applicant_btn3.Name = "Applicant_btn3";
             this.Applicant_btn3.Size = new System.Drawing.Size(140, 42);
-            this.Applicant_btn3.TabIndex = 18;
+            this.Applicant_btn3.TabIndex = 10;
             this.Applicant_btn3.Text = "Browse";
             this.Applicant_btn3.UseVisualStyleBackColor = false;
             this.Applicant_btn3.Click += new System.EventHandler(this.Applicant_btn3_Click);
@@ -260,10 +270,12 @@
             // 
             // applicant_txtbx5
             // 
+            this.applicant_txtbx5.BackColor = System.Drawing.SystemColors.Control;
+            this.applicant_txtbx5.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.applicant_txtbx5.Location = new System.Drawing.Point(12, 241);
             this.applicant_txtbx5.Name = "applicant_txtbx5";
-            this.applicant_txtbx5.Size = new System.Drawing.Size(140, 20);
-            this.applicant_txtbx5.TabIndex = 20;
+            this.applicant_txtbx5.Size = new System.Drawing.Size(140, 22);
+            this.applicant_txtbx5.TabIndex = 9;
             // 
             // applicant_lbl5
             // 

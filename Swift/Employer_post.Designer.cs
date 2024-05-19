@@ -89,19 +89,23 @@
             // 
             // employer_txtbx2
             // 
+            this.employer_txtbx2.BackColor = System.Drawing.SystemColors.Control;
+            this.employer_txtbx2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.employer_txtbx2.Location = new System.Drawing.Point(51, 172);
             this.employer_txtbx2.Multiline = true;
             this.employer_txtbx2.Name = "employer_txtbx2";
             this.employer_txtbx2.Size = new System.Drawing.Size(156, 55);
-            this.employer_txtbx2.TabIndex = 5;
+            this.employer_txtbx2.TabIndex = 3;
             // 
             // employer_txtbx3
             // 
+            this.employer_txtbx3.BackColor = System.Drawing.SystemColors.Control;
+            this.employer_txtbx3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.employer_txtbx3.Location = new System.Drawing.Point(51, 257);
             this.employer_txtbx3.Multiline = true;
             this.employer_txtbx3.Name = "employer_txtbx3";
             this.employer_txtbx3.Size = new System.Drawing.Size(156, 42);
-            this.employer_txtbx3.TabIndex = 6;
+            this.employer_txtbx3.TabIndex = 4;
             // 
             // employer_btn1
             // 
@@ -112,7 +116,7 @@
             this.employer_btn1.Location = new System.Drawing.Point(51, 342);
             this.employer_btn1.Name = "employer_btn1";
             this.employer_btn1.Size = new System.Drawing.Size(156, 47);
-            this.employer_btn1.TabIndex = 7;
+            this.employer_btn1.TabIndex = 5;
             this.employer_btn1.Text = "Add Post";
             this.employer_btn1.UseVisualStyleBackColor = false;
             this.employer_btn1.Click += new System.EventHandler(this.employer_btn1_Click_1);
@@ -191,7 +195,7 @@
             this.employer_btn2.Location = new System.Drawing.Point(51, 398);
             this.employer_btn2.Name = "employer_btn2";
             this.employer_btn2.Size = new System.Drawing.Size(156, 47);
-            this.employer_btn2.TabIndex = 9;
+            this.employer_btn2.TabIndex = 6;
             this.employer_btn2.Text = "Update Post";
             this.employer_btn2.UseVisualStyleBackColor = false;
             this.employer_btn2.Click += new System.EventHandler(this.employer_btn2_Click);
@@ -205,17 +209,19 @@
             this.employer_btn3.Location = new System.Drawing.Point(51, 454);
             this.employer_btn3.Name = "employer_btn3";
             this.employer_btn3.Size = new System.Drawing.Size(156, 47);
-            this.employer_btn3.TabIndex = 10;
+            this.employer_btn3.TabIndex = 7;
             this.employer_btn3.Text = "Delete Post";
             this.employer_btn3.UseVisualStyleBackColor = false;
             this.employer_btn3.Click += new System.EventHandler(this.employer_btn3_Click);
             // 
             // employer_txtbx4
             // 
+            this.employer_txtbx4.BackColor = System.Drawing.SystemColors.Control;
+            this.employer_txtbx4.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.employer_txtbx4.Location = new System.Drawing.Point(331, 31);
             this.employer_txtbx4.Name = "employer_txtbx4";
-            this.employer_txtbx4.Size = new System.Drawing.Size(299, 20);
-            this.employer_txtbx4.TabIndex = 11;
+            this.employer_txtbx4.Size = new System.Drawing.Size(299, 22);
+            this.employer_txtbx4.TabIndex = 8;
             this.employer_txtbx4.TextChanged += new System.EventHandler(this.employer_txtbx4_TextChanged);
             // 
             // employer_lbl4
@@ -232,8 +238,11 @@
             // 
             // employer_cmbbx1
             // 
+            this.employer_cmbbx1.BackColor = System.Drawing.SystemColors.Control;
             this.employer_cmbbx1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.employer_cmbbx1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.employer_cmbbx1.FormattingEnabled = true;
+            this.employer_cmbbx1.ItemHeight = 13;
             this.employer_cmbbx1.Location = new System.Drawing.Point(51, 123);
             this.employer_cmbbx1.Name = "employer_cmbbx1";
             this.employer_cmbbx1.Size = new System.Drawing.Size(156, 21);
@@ -254,10 +263,12 @@
             // 
             // employer_txtbx1
             // 
+            this.employer_txtbx1.BackColor = System.Drawing.SystemColors.Control;
+            this.employer_txtbx1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.employer_txtbx1.Location = new System.Drawing.Point(51, 73);
             this.employer_txtbx1.Name = "employer_txtbx1";
-            this.employer_txtbx1.Size = new System.Drawing.Size(156, 20);
-            this.employer_txtbx1.TabIndex = 15;
+            this.employer_txtbx1.Size = new System.Drawing.Size(156, 22);
+            this.employer_txtbx1.TabIndex = 1;
             this.employer_txtbx1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // Employer_post

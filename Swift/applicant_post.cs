@@ -108,7 +108,7 @@ namespace Swift
                     command.Parameters.AddWithValue("@CVResume", applicant_rtxtbx1.Text);
                     command.ExecuteNonQuery();
 
-                    MessageBox.Show("Data inserted successfully!");
+                    MessageBox.Show("Application Sent!");
                 }
                 catch (Exception ex)
                 {
@@ -162,7 +162,7 @@ namespace Swift
                         // Add data to the DataGridView
                         Applicant_Datagrdvw1.Rows.Add(
                             Applicant_Datagrdvw1.Rows.Count + 1,
-                            reader["id"].ToString(),
+                           
                             reader["job_title"].ToString(),
                             reader["job_desc"].ToString(),
                             reader["contact_info"].ToString(),

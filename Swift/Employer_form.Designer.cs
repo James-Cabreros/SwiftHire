@@ -64,7 +64,7 @@
             this.employer_extbtn.Location = new System.Drawing.Point(772, 0);
             this.employer_extbtn.Name = "employer_extbtn";
             this.employer_extbtn.Size = new System.Drawing.Size(28, 28);
-            this.employer_extbtn.TabIndex = 1;
+            this.employer_extbtn.TabIndex = 4;
             this.employer_extbtn.UseVisualStyleBackColor = false;
             this.employer_extbtn.Click += new System.EventHandler(this.Button1_Click_2);
             // 
@@ -105,7 +105,7 @@
             this.employer_btn3.Name = "employer_btn3";
             this.employer_btn3.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
             this.employer_btn3.Size = new System.Drawing.Size(145, 28);
-            this.employer_btn3.TabIndex = 7;
+            this.employer_btn3.TabIndex = 3;
             this.employer_btn3.Text = "Logout";
             this.employer_btn3.UseVisualStyleBackColor = true;
             this.employer_btn3.Click += new System.EventHandler(this.Employer_btn3_Click);
@@ -121,7 +121,7 @@
             this.employer_btn2.Name = "employer_btn2";
             this.employer_btn2.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
             this.employer_btn2.Size = new System.Drawing.Size(145, 28);
-            this.employer_btn2.TabIndex = 6;
+            this.employer_btn2.TabIndex = 2;
             this.employer_btn2.Text = "Notifications";
             this.employer_btn2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.employer_btn2.UseVisualStyleBackColor = true;

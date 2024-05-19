@@ -50,7 +50,7 @@
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel1.LinkColor = System.Drawing.Color.White;
-            this.linkLabel1.Location = new System.Drawing.Point(21, 298);
+            this.linkLabel1.Location = new System.Drawing.Point(62, 298);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(132, 13);
             this.linkLabel1.TabIndex = 37;
@@ -61,8 +61,9 @@
             // 
             // employer_txtbx3
             // 
+            this.employer_txtbx3.BackColor = System.Drawing.SystemColors.Control;
             this.employer_txtbx3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.employer_txtbx3.Location = new System.Drawing.Point(159, 189);
+            this.employer_txtbx3.Location = new System.Drawing.Point(200, 207);
             this.employer_txtbx3.Name = "employer_txtbx3";
             this.employer_txtbx3.Size = new System.Drawing.Size(182, 23);
             this.employer_txtbx3.TabIndex = 31;
@@ -74,7 +75,7 @@
             this.employer_lbl4.BackColor = System.Drawing.Color.Transparent;
             this.employer_lbl4.Font = new System.Drawing.Font("Segoe UI", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.employer_lbl4.ForeColor = System.Drawing.Color.Transparent;
-            this.employer_lbl4.Location = new System.Drawing.Point(16, 192);
+            this.employer_lbl4.Location = new System.Drawing.Point(57, 210);
             this.employer_lbl4.Name = "employer_lbl4";
             this.employer_lbl4.Size = new System.Drawing.Size(137, 20);
             this.employer_lbl4.TabIndex = 36;
@@ -86,7 +87,7 @@
             this.employer_lbl3.BackColor = System.Drawing.Color.Transparent;
             this.employer_lbl3.Font = new System.Drawing.Font("Segoe UI", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.employer_lbl3.ForeColor = System.Drawing.Color.Transparent;
-            this.employer_lbl3.Location = new System.Drawing.Point(72, 152);
+            this.employer_lbl3.Location = new System.Drawing.Point(113, 170);
             this.employer_lbl3.Name = "employer_lbl3";
             this.employer_lbl3.Size = new System.Drawing.Size(81, 20);
             this.employer_lbl3.TabIndex = 35;
@@ -94,8 +95,9 @@
             // 
             // employer_txtbx2
             // 
+            this.employer_txtbx2.BackColor = System.Drawing.SystemColors.Control;
             this.employer_txtbx2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.employer_txtbx2.Location = new System.Drawing.Point(159, 149);
+            this.employer_txtbx2.Location = new System.Drawing.Point(200, 167);
             this.employer_txtbx2.Name = "employer_txtbx2";
             this.employer_txtbx2.Size = new System.Drawing.Size(182, 23);
             this.employer_txtbx2.TabIndex = 30;
@@ -108,7 +110,7 @@
             this.employer_ckbx1.BackColor = System.Drawing.Color.Transparent;
             this.employer_ckbx1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.employer_ckbx1.ForeColor = System.Drawing.Color.Transparent;
-            this.employer_ckbx1.Location = new System.Drawing.Point(159, 218);
+            this.employer_ckbx1.Location = new System.Drawing.Point(200, 236);
             this.employer_ckbx1.Name = "employer_ckbx1";
             this.employer_ckbx1.Size = new System.Drawing.Size(97, 17);
             this.employer_ckbx1.TabIndex = 34;
@@ -125,7 +127,7 @@
             this.employer_btn1.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.employer_btn1.Image = global::Swift.Properties.Resources.icons8_register_25;
             this.employer_btn1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.employer_btn1.Location = new System.Drawing.Point(183, 273);
+            this.employer_btn1.Location = new System.Drawing.Point(224, 273);
             this.employer_btn1.Name = "employer_btn1";
             this.employer_btn1.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
             this.employer_btn1.Size = new System.Drawing.Size(130, 38);
@@ -137,8 +139,9 @@
             // 
             // employer_txtbx1
             // 
+            this.employer_txtbx1.BackColor = System.Drawing.SystemColors.Control;
             this.employer_txtbx1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.employer_txtbx1.Location = new System.Drawing.Point(159, 111);
+            this.employer_txtbx1.Location = new System.Drawing.Point(200, 129);
             this.employer_txtbx1.Name = "employer_txtbx1";
             this.employer_txtbx1.Size = new System.Drawing.Size(182, 23);
             this.employer_txtbx1.TabIndex = 28;
@@ -149,7 +152,7 @@
             this.employer_lbl2.BackColor = System.Drawing.Color.Transparent;
             this.employer_lbl2.Font = new System.Drawing.Font("Segoe UI", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.employer_lbl2.ForeColor = System.Drawing.Color.Transparent;
-            this.employer_lbl2.Location = new System.Drawing.Point(27, 111);
+            this.employer_lbl2.Location = new System.Drawing.Point(68, 129);
             this.employer_lbl2.Name = "employer_lbl2";
             this.employer_lbl2.Size = new System.Drawing.Size(128, 20);
             this.employer_lbl2.TabIndex = 32;
@@ -209,6 +212,7 @@
             this.Name = "employer_regis";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "employer_regis";
+            this.Load += new System.EventHandler(this.employer_regis_Load);
             this.applicant_pnl1.ResumeLayout(false);
             this.applicant_pnl1.PerformLayout();
             this.ResumeLayout(false);

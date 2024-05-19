@@ -166,19 +166,23 @@
             // 
             // employer_txtbx1
             // 
+            this.employer_txtbx1.BackColor = System.Drawing.SystemColors.Control;
+            this.employer_txtbx1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.employer_txtbx1.Location = new System.Drawing.Point(12, 101);
             this.employer_txtbx1.Name = "employer_txtbx1";
-            this.employer_txtbx1.Size = new System.Drawing.Size(139, 20);
-            this.employer_txtbx1.TabIndex = 3;
+            this.employer_txtbx1.Size = new System.Drawing.Size(139, 22);
+            this.employer_txtbx1.TabIndex = 2;
             this.employer_txtbx1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // employer_txtbx2
             // 
+            this.employer_txtbx2.BackColor = System.Drawing.SystemColors.Control;
+            this.employer_txtbx2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.employer_txtbx2.Location = new System.Drawing.Point(12, 148);
             this.employer_txtbx2.Name = "employer_txtbx2";
             this.employer_txtbx2.ReadOnly = true;
-            this.employer_txtbx2.Size = new System.Drawing.Size(139, 20);
-            this.employer_txtbx2.TabIndex = 5;
+            this.employer_txtbx2.Size = new System.Drawing.Size(139, 22);
+            this.employer_txtbx2.TabIndex = 3;
             this.employer_txtbx2.TextChanged += new System.EventHandler(this.employer_txtbx2_TextChanged);
             // 
             // label2
@@ -195,11 +199,13 @@
             // 
             // employer_txtbx3
             // 
+            this.employer_txtbx3.BackColor = System.Drawing.SystemColors.Control;
+            this.employer_txtbx3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.employer_txtbx3.Location = new System.Drawing.Point(12, 195);
             this.employer_txtbx3.Name = "employer_txtbx3";
             this.employer_txtbx3.ReadOnly = true;
-            this.employer_txtbx3.Size = new System.Drawing.Size(139, 20);
-            this.employer_txtbx3.TabIndex = 7;
+            this.employer_txtbx3.Size = new System.Drawing.Size(139, 22);
+            this.employer_txtbx3.TabIndex = 4;
             this.employer_txtbx3.TextChanged += new System.EventHandler(this.employer_txtbx3_TextChanged);
             // 
             // label3
@@ -216,11 +222,13 @@
             // 
             // employer_txtbx4
             // 
+            this.employer_txtbx4.BackColor = System.Drawing.SystemColors.Control;
+            this.employer_txtbx4.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.employer_txtbx4.Location = new System.Drawing.Point(12, 264);
             this.employer_txtbx4.Name = "employer_txtbx4";
             this.employer_txtbx4.ReadOnly = true;
-            this.employer_txtbx4.Size = new System.Drawing.Size(139, 20);
-            this.employer_txtbx4.TabIndex = 9;
+            this.employer_txtbx4.Size = new System.Drawing.Size(139, 22);
+            this.employer_txtbx4.TabIndex = 5;
             // 
             // label4
             // 
@@ -237,11 +245,13 @@
             // 
             // employer_txtbx5
             // 
+            this.employer_txtbx5.BackColor = System.Drawing.SystemColors.Control;
+            this.employer_txtbx5.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.employer_txtbx5.Location = new System.Drawing.Point(12, 309);
             this.employer_txtbx5.Name = "employer_txtbx5";
             this.employer_txtbx5.ReadOnly = true;
-            this.employer_txtbx5.Size = new System.Drawing.Size(139, 20);
-            this.employer_txtbx5.TabIndex = 11;
+            this.employer_txtbx5.Size = new System.Drawing.Size(139, 22);
+            this.employer_txtbx5.TabIndex = 6;
             this.employer_txtbx5.TextChanged += new System.EventHandler(this.employer_txtbx5_TextChanged);
             // 
             // label5
@@ -271,8 +281,11 @@
             // 
             // employer_cmbbx1
             // 
+            this.employer_cmbbx1.BackColor = System.Drawing.SystemColors.Control;
             this.employer_cmbbx1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.employer_cmbbx1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.employer_cmbbx1.FormattingEnabled = true;
+            this.employer_cmbbx1.ItemHeight = 13;
             this.employer_cmbbx1.Location = new System.Drawing.Point(12, 384);
             this.employer_cmbbx1.Name = "employer_cmbbx1";
             this.employer_cmbbx1.Size = new System.Drawing.Size(139, 21);
@@ -288,7 +301,7 @@
             this.employer_btn1.Location = new System.Drawing.Point(12, 337);
             this.employer_btn1.Name = "employer_btn1";
             this.employer_btn1.Size = new System.Drawing.Size(139, 23);
-            this.employer_btn1.TabIndex = 14;
+            this.employer_btn1.TabIndex = 7;
             this.employer_btn1.Text = "Save";
             this.employer_btn1.UseVisualStyleBackColor = false;
             this.employer_btn1.Click += new System.EventHandler(this.button1_Click);
@@ -302,7 +315,7 @@
             this.employer_btn2.Location = new System.Drawing.Point(14, 417);
             this.employer_btn2.Name = "employer_btn2";
             this.employer_btn2.Size = new System.Drawing.Size(139, 40);
-            this.employer_btn2.TabIndex = 15;
+            this.employer_btn2.TabIndex = 9;
             this.employer_btn2.Text = "Send";
             this.employer_btn2.UseVisualStyleBackColor = false;
             this.employer_btn2.Click += new System.EventHandler(this.button1_Click_1);
@@ -316,7 +329,7 @@
             this.employer_btn3.Location = new System.Drawing.Point(12, 37);
             this.employer_btn3.Name = "employer_btn3";
             this.employer_btn3.Size = new System.Drawing.Size(139, 40);
-            this.employer_btn3.TabIndex = 16;
+            this.employer_btn3.TabIndex = 1;
             this.employer_btn3.Text = "Refresh Table";
             this.employer_btn3.UseVisualStyleBackColor = false;
             this.employer_btn3.Click += new System.EventHandler(this.button2_Click);
@@ -330,7 +343,7 @@
             this.button1.Location = new System.Drawing.Point(16, 463);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(139, 40);
-            this.button1.TabIndex = 17;
+            this.button1.TabIndex = 10;
             this.button1.Text = "Delete Inquiry";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_2);

@@ -48,7 +48,7 @@
             this.Applicant_btn.Location = new System.Drawing.Point(344, 191);
             this.Applicant_btn.Name = "Applicant_btn";
             this.Applicant_btn.Size = new System.Drawing.Size(121, 49);
-            this.Applicant_btn.TabIndex = 0;
+            this.Applicant_btn.TabIndex = 1;
             this.Applicant_btn.Text = "Applicant";
             this.Applicant_btn.UseVisualStyleBackColor = false;
             this.Applicant_btn.Click += new System.EventHandler(this.Button1_Click);
@@ -127,7 +127,7 @@
             this.Exit_btn.Location = new System.Drawing.Point(652, 0);
             this.Exit_btn.Name = "Exit_btn";
             this.Exit_btn.Size = new System.Drawing.Size(32, 33);
-            this.Exit_btn.TabIndex = 6;
+            this.Exit_btn.TabIndex = 3;
             this.Exit_btn.UseVisualStyleBackColor = false;
             this.Exit_btn.Click += new System.EventHandler(this.Button1_Click_1);
             // 

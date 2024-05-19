@@ -159,31 +159,52 @@ namespace Swift
         private void employer_btn3_Click(object sender, EventArgs e)
         {
             // Delete button functionality
-            try
+            if (string.IsNullOrEmpty(employer_txtbx1.Text))
             {
-                connection.Open();
-                string deleteQuery = "DELETE FROM jobpost WHERE job_title=@jobtitle";
-                command = new MySqlCommand(deleteQuery, connection);
-                command.Parameters.AddWithValue("@jobtitle", employer_cmbbx1.Text);
-                int rowsAffected = command.ExecuteNonQuery();
-                connection.Close();
+                MessageBox.Show("Please input the ID to delete the record", "Error");
+                clearFields();
+            }
+            else
+            {
+                try
+                {
+                    // Validate the input to ensure it's a valid integer
+                    if (int.TryParse(employer_txtbx1.Text, out int id))
+                    {
+                        connection.Open();
 
-                if (rowsAffected > 0)
-                {
-                    MessageBox.Show("Record deleted successfully.");
-                    loadRecord();
-                    clearFields();
+                        // Update the query to delete based on 'id'
+                        string deleteQuery = "DELETE FROM jobpost WHERE id = @id";
+                        command = new MySqlCommand(deleteQuery, connection);
+                        command.Parameters.AddWithValue("@id", id);
+
+                        int rowsAffected = command.ExecuteNonQuery();
+                        connection.Close();
+
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Record deleted successfully.");
+                            loadRecord();
+                            clearFields();
+                        }
+                        else
+                        {
+                            MessageBox.Show("No records were deleted. Make sure the ID exists in the database.");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Please enter a valid ID.");
+                    }
                 }
-                else
+                catch (MySqlException ex)
                 {
-                    MessageBox.Show("Failed to delete record.");
+                    MessageBox.Show("Error deleting record: " + ex.Message);
                 }
             }
-            catch (MySqlException ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
+
         }
+
 
         private void clearFields()
         {

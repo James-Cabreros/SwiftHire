@@ -45,51 +45,44 @@ namespace Swift
         {
             if (string.IsNullOrEmpty(employer_txtbx1.Text) || string.IsNullOrEmpty(employer_txtbx2.Text))
             {
-                MessageBox.Show("Please input Username and Password", "Error");
+                MessageBox.Show("Please input Username and Password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                connection.Open();
-                string selectQuery = "SELECT * FROM `employer_info` WHERE name = @username AND password = @password";
-                command = new MySqlCommand(selectQuery, connection);
-                command.Parameters.AddWithValue("@username", employer_txtbx1.Text);
-                command.Parameters.AddWithValue("@password", employer_txtbx2.Text);
-                mdr = command.ExecuteReader();
-                if (mdr.Read())
+                try
                 {
-                    MessageBox.Show("Login Successful!");
-                    this.Hide();
-                    Employer_form form2 = new Employer_form();
-                    form2.ShowDialog();
-                }
-                else
-                {
-                    connection.Close(); // Close the previous connection before opening a new one for the update
-
-                    // Check the number of existing users
                     connection.Open();
-                    string countQuery = "SELECT COUNT(*) FROM `employer_info`";
-                    command = new MySqlCommand(countQuery, connection);
-                    int userCount = Convert.ToInt32(command.ExecuteScalar());
-                    connection.Close();
+                    string selectQuery = "SELECT * FROM `employer_info` WHERE name = @username AND password = @password";
+                    command = new MySqlCommand(selectQuery, connection);
+                    command.Parameters.AddWithValue("@username", employer_txtbx1.Text);
+                    command.Parameters.AddWithValue("@password", employer_txtbx2.Text);
 
-                    if (userCount < 2)
+                    Console.WriteLine("Query: " + selectQuery); // Print the query for debugging
+                    Console.WriteLine("name: " + employer_txtbx1.Text); // Print the username for debugging
+                    Console.WriteLine("Password: " + employer_txtbx2.Text); // Print the password for debugging
+
+                    mdr = command.ExecuteReader();
+                    if (mdr.Read())
                     {
-                        // Proceed with registration if the maximum number of users has not been reached
-                        connection.Open();
-                        string insertQuery = "INSERT INTO `employer_info` (name, Password) VALUES (@username, @password)";
-                        command = new MySqlCommand(insertQuery, connection);
-                        command.Parameters.AddWithValue("@username", employer_txtbx1.Text);
-                        command.Parameters.AddWithValue("@password", employer_txtbx2.Text);
-                        command.ExecuteNonQuery();
-                        connection.Close();
-
-                        MessageBox.Show("Registration Successful! You can now login.");
+                        MessageBox.Show("Login Successful!");
+                        this.Hide();
+                        Applicant_Form form2 = new Applicant_Form();
+                        form2.ShowDialog();
+                        employer_txtbx1.Text = "";
+                        employer_txtbx2.Text = "";
                     }
                     else
                     {
-                        MessageBox.Show("something's not right with the username or password you entered.");
+                        MessageBox.Show("Invalid username or password");
                     }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+                finally
+                {
+                    connection.Close();
                 }
             }
         }

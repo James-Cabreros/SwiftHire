@@ -92,6 +92,7 @@
             // 
             // applicant_txtbx2
             // 
+            this.applicant_txtbx2.BackColor = System.Drawing.SystemColors.Control;
             this.applicant_txtbx2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.applicant_txtbx2.Location = new System.Drawing.Point(191, 203);
             this.applicant_txtbx2.Name = "applicant_txtbx2";
@@ -101,6 +102,7 @@
             // 
             // applicant_txtbx1
             // 
+            this.applicant_txtbx1.BackColor = System.Drawing.SystemColors.Control;
             this.applicant_txtbx1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.applicant_txtbx1.Location = new System.Drawing.Point(191, 160);
             this.applicant_txtbx1.Name = "applicant_txtbx1";
