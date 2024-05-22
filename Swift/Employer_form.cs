@@ -21,31 +21,17 @@ namespace Swift
         public Employer_form()
         {
             InitializeComponent();
-            SetBackground();
+           
         }
 
-        private void SetBackground()
-        {
-            // Create a LinearGradientBrush for the background
-            LinearGradientBrush gradientBrush = new LinearGradientBrush(
-                this.ClientRectangle,
-                Color.FromArgb(2, 0, 36),
-                Color.FromArgb(0, 212, 255),
-                LinearGradientMode.Horizontal);
-
-            // Set the background of the form to the LinearGradientBrush
-            this.BackgroundImage = new Bitmap(this.Width, this.Height);
-            Graphics graphics = Graphics.FromImage(this.BackgroundImage);
-            graphics.FillRectangle(gradientBrush, this.ClientRectangle);
-
-            employer_pnl3.BackgroundImage = new Bitmap(employer_pnl3.Width, employer_pnl3.Height);
-            Graphics graphics1 = Graphics.FromImage(employer_pnl3.BackgroundImage);
-            graphics1.FillRectangle(gradientBrush, employer_pnl3.ClientRectangle);
-        }
+        public string EmployerName { get; set; }
 
 
         private void Employer_form_Load(object sender, EventArgs e)
         {
+            Loadform(new Employer_post());
+
+            Employer_name.Text = EmployerName;
 
         }
 
@@ -68,7 +54,7 @@ namespace Swift
 
         private void Employer_pnl3_Paint(object sender, PaintEventArgs e)
         {
-
+           
         }
 
         private void Employer_pnl2_Paint(object sender, PaintEventArgs e)

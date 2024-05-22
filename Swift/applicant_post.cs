@@ -23,7 +23,7 @@ namespace Swift
         public applicant_post()
         {
             InitializeComponent();
-            SetBackground();
+            
             LoadData();
         }
 
@@ -60,21 +60,7 @@ namespace Swift
             applicant_txtbx3.Clear();
         }
 
-        private void SetBackground()
-        {
-            // Create a LinearGradientBrush for the background
-            LinearGradientBrush gradientBrush = new LinearGradientBrush(
-                this.ClientRectangle,
-                Color.FromArgb(2, 0, 36),
-                Color.FromArgb(0, 212, 255),
-                LinearGradientMode.Horizontal);
-
-            // Set the background of the form to the LinearGradientBrush
-            this.BackgroundImage = new Bitmap(this.Width, this.Height);
-            Graphics graphics = Graphics.FromImage(this.BackgroundImage);
-            graphics.FillRectangle(gradientBrush, this.ClientRectangle);
-
-        }
+       
 
         private void applicant_post_Load(object sender, EventArgs e)
         {
@@ -108,11 +94,11 @@ namespace Swift
                     command.Parameters.AddWithValue("@CVResume", applicant_rtxtbx1.Text);
                     command.ExecuteNonQuery();
 
-                    MessageBox.Show("Application Sent!");
+                    MessageBox.Show("Application Sent!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("An error occurred: " + ex.Message, "Error");
+                    MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 finally
                 {
@@ -126,13 +112,16 @@ namespace Swift
             {
                 Applicant_Datagrdvw1.Rows.Clear();
                 connection.Open();
-                command = new MySqlCommand("SELECT job_title, job_desc, contact_info FROM jobpost WHERE job_title LIKE @searchText OR job_desc LIKE @searchText OR contact_info LIKE @searchText", connection);
+                command = new MySqlCommand("SELECT job_title,job_desc, contact_info FROM jobpost WHERE job_title LIKE @searchText ", connection);
                 command.Parameters.Clear();
                 command.Parameters.AddWithValue("@searchText", "%" + applicant_txtbx1.Text + "%");
                 reader = command.ExecuteReader();
                 while (reader.Read())
                 {
-                    Applicant_Datagrdvw1.Rows.Add(Applicant_Datagrdvw1.Rows.Count + 1, reader["job_title"].ToString(), reader["job_desc"].ToString(), reader["contact_info"].ToString());
+                    Applicant_Datagrdvw1.Rows.Add(Applicant_Datagrdvw1.Rows.Count + 1, 
+                        reader["job_title"].ToString(),
+                        reader["job_desc"].ToString(), 
+                        reader["contact_info"].ToString());
                 }
                 reader.Close();
                 connection.Close();
@@ -178,7 +167,7 @@ namespace Swift
                 }
                 catch (MySqlException ex)
                 {
-                    MessageBox.Show("Error: " + ex.Message);
+                    MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 finally
                 {
@@ -225,18 +214,22 @@ namespace Swift
                     // Load the file content into the richtextbox
                     applicant_rtxtbx1.Text = fileContent;
 
-                    MessageBox.Show("File loaded successfully!");
+                    MessageBox.Show("File loaded successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error loading file: " + ex.Message, "Error");
+                    MessageBox.Show("Error loading file: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
             {
-                MessageBox.Show("No file selected.", "Error");
+                MessageBox.Show("No file selected.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
+        private void applicant_txtbx5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

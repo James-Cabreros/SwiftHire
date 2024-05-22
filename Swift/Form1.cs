@@ -12,36 +12,23 @@ namespace Swift
         public Opening_form()
         {
             InitializeComponent();
-            SetBackground();
+            
             
         }
 
-        private void SetBackground()
-        {
-            // Create a LinearGradientBrush for the background
-            LinearGradientBrush gradientBrush = new LinearGradientBrush(
-                this.ClientRectangle,
-                Color.FromArgb(2, 0, 36),
-                Color.FromArgb(0, 212, 255),
-                LinearGradientMode.Horizontal);
-
-            // Set the background of the form to the LinearGradientBrush
-            this.BackgroundImage = new Bitmap(this.Width, this.Height);
-            Graphics graphics = Graphics.FromImage(this.BackgroundImage);
-            graphics.FillRectangle(gradientBrush, this.ClientRectangle);
-        }
+      
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            Applicant_regis applicant_regis = new Applicant_regis();
-            applicant_regis.Show();
+            Applicant_login applicant_login = new Applicant_login();
+            applicant_login.Show();
             this.Hide();
         }
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            employer_regis employer_Regis = new employer_regis();
-            employer_Regis.Show();
+            Employer_Login employer_Login = new Employer_Login();
+            employer_Login.Show();
             this.Hide();
         }
 

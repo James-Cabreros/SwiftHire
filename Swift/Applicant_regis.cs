@@ -20,23 +20,10 @@ namespace Swift
         public Applicant_regis()
         {
             InitializeComponent();
-            SetBackground();
+           
         }
 
-        private void SetBackground()
-        {
-            // Create a LinearGradientBrush for the background
-            LinearGradientBrush gradientBrush = new LinearGradientBrush(
-                this.ClientRectangle,
-                Color.FromArgb(2, 0, 36),
-                Color.FromArgb(0, 212, 255),
-                LinearGradientMode.Horizontal);
-
-            // Set the background of the form to the LinearGradientBrush
-            this.BackgroundImage = new Bitmap(this.Width, this.Height);
-            Graphics graphics = Graphics.FromImage(this.BackgroundImage);
-            graphics.FillRectangle(gradientBrush, this.ClientRectangle);
-        }
+        
 
         private void Applicant_Login_Load(object sender, EventArgs e)
         {
@@ -68,9 +55,7 @@ namespace Swift
             int userCount = Convert.ToInt32(command.ExecuteScalar());
             connection.Close();
 
-            Applicant_txtbx1.Text = "";
-            Applicant_txtbx2.Text = "";
-            Applicant_txtbx3.Text = "";
+            
 
 
 
@@ -111,6 +96,8 @@ namespace Swift
                 Applicant_txtbx1.Text = ""; 
                 Applicant_txtbx2.Text = "";
                 Applicant_txtbx3.Text = "";
+
+                
             }
             
         }
@@ -129,12 +116,7 @@ namespace Swift
             }
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            Applicant_login applicant_Login = new Applicant_login();
-            applicant_Login.Show();
-            this.Hide();
-        }
+       
 
         private void Applicant_txtbx3_TextChanged(object sender, EventArgs e)
         {

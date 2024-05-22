@@ -15,23 +15,7 @@ namespace Swift
         public Employer_Login()
         {
             InitializeComponent();
-            SetBackground();
-        }
-
-        private void SetBackground()
-        {
-            // Create a LinearGradientBrush for the background
-            LinearGradientBrush gradientBrush = new LinearGradientBrush(
-                this.ClientRectangle,
-                Color.FromArgb(2, 0, 36),
-                Color.FromArgb(0, 212, 255),
-                LinearGradientMode.Horizontal);
-
-            // Set the background of the form to the LinearGradientBrush
-            this.BackgroundImage = new Bitmap(this.Width, this.Height);
-            Graphics graphics = Graphics.FromImage(this.BackgroundImage);
-            graphics.FillRectangle(gradientBrush, this.ClientRectangle);
-        }
+        }   
 
         private void Button2_Click(object sender, EventArgs e)
         {
@@ -64,21 +48,21 @@ namespace Swift
                     mdr = command.ExecuteReader();
                     if (mdr.Read())
                     {
-                        MessageBox.Show("Login Successful!");
+                        MessageBox.Show("Login Successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Hide();
-                        Applicant_Form form2 = new Applicant_Form();
+                        Employer_form form2 = new Employer_form();       
+                        form2.EmployerName = employer_txtbx1.Text;
                         form2.ShowDialog();
-                        employer_txtbx1.Text = "";
-                        employer_txtbx2.Text = "";
+
                     }
                     else
                     {
-                        MessageBox.Show("Invalid username or password");
+                        MessageBox.Show("Invalid username or password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error: " + ex.Message);
+                    MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 finally
                 {
@@ -86,9 +70,6 @@ namespace Swift
                 }
             }
         }
-
-
-
 
 
         private void employer_chbx1_CheckedChanged(object sender, EventArgs e)
@@ -118,6 +99,20 @@ namespace Swift
         private void Employer_Login_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            employer_regis employer_Regis = new employer_regis();
+            employer_Regis.Show();
+            this.Hide();
+        }
+
+        private void linkLabel1_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            employer_forgot employer_Forgot = new employer_forgot();
+            employer_Forgot.Show();
+            this.Hide();
         }
     }
 }

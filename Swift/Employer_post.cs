@@ -1,8 +1,10 @@
-﻿using System;
-using System.Drawing;
+﻿using MySql.Data.MySqlClient;
 using System.Drawing.Drawing2D;
+using System.Drawing;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
+using System;
+
+
 
 namespace Swift
 {
@@ -15,27 +17,14 @@ namespace Swift
         public Employer_post()
         {
             InitializeComponent();
-            SetBackground();
+           
             PopulateComboBox();
 
             // Set ComboBox DropDownStyle to DropDownList to disable typing
             employer_cmbbx1.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
-        private void SetBackground()
-        {
-            // Create a LinearGradientBrush for the background
-            LinearGradientBrush gradientBrush = new LinearGradientBrush(
-                this.ClientRectangle,
-                Color.FromArgb(2, 0, 36),
-                Color.FromArgb(0, 212, 255),
-                LinearGradientMode.Horizontal);
-
-            // Set the background of the form to the LinearGradientBrush
-            this.BackgroundImage = new Bitmap(this.Width, this.Height);
-            Graphics graphics = Graphics.FromImage(this.BackgroundImage);
-            graphics.FillRectangle(gradientBrush, this.ClientRectangle);
-        }
+     
 
         private void PopulateComboBox()
         {
@@ -54,7 +43,7 @@ namespace Swift
         {
             if (string.IsNullOrEmpty(employer_cmbbx1.Text) || string.IsNullOrEmpty(employer_txtbx2.Text) || string.IsNullOrEmpty(employer_txtbx3.Text))
             {
-                MessageBox.Show("Please input all the necessary information", "Error");
+                MessageBox.Show("Please input all the necessary information", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 clearFields();
             }
             else
@@ -72,23 +61,24 @@ namespace Swift
 
                     if (rowsAffected > 0)
                     {
-                        MessageBox.Show("Post added");
+                        MessageBox.Show("Post added", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         loadRecord();
                         clearFields();
                     }
                     else
                     {
-                        MessageBox.Show("Failed to add post");
+                        MessageBox.Show("Failed to add post", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 catch (MySqlException ex)
                 {
-                    MessageBox.Show("Error: " + ex.Message);
+                    MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     Console.WriteLine("Error Code: " + ex.Number);
                     Console.WriteLine("Error Message: " + ex.Message);
                 }
             }
         }
+
 
         private void loadRecord()
         {
@@ -157,53 +147,53 @@ namespace Swift
 
 
         private void employer_btn3_Click(object sender, EventArgs e)
+{
+    // Delete button functionality
+    if (string.IsNullOrEmpty(employer_txtbx1.Text))
+    {
+        MessageBox.Show("Please input the ID to delete the record", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        clearFields();
+    }
+    else
+    {
+        try
         {
-            // Delete button functionality
-            if (string.IsNullOrEmpty(employer_txtbx1.Text))
+            // Validate the input to ensure it's a valid integer
+            if (int.TryParse(employer_txtbx1.Text, out int id))
             {
-                MessageBox.Show("Please input the ID to delete the record", "Error");
-                clearFields();
+                connection.Open();
+
+                // Update the query to delete based on 'id'
+                string deleteQuery = "DELETE FROM jobpost WHERE id = @id";
+                command = new MySqlCommand(deleteQuery, connection);
+                command.Parameters.AddWithValue("@id", id);
+
+                int rowsAffected = command.ExecuteNonQuery();
+                connection.Close();
+
+                if (rowsAffected > 0)
+                {
+                    MessageBox.Show("Record deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    loadRecord();
+                    clearFields();
+                }
+                else
+                {
+                    MessageBox.Show("No records were deleted. Make sure the ID exists in the database.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
             else
             {
-                try
-                {
-                    // Validate the input to ensure it's a valid integer
-                    if (int.TryParse(employer_txtbx1.Text, out int id))
-                    {
-                        connection.Open();
-
-                        // Update the query to delete based on 'id'
-                        string deleteQuery = "DELETE FROM jobpost WHERE id = @id";
-                        command = new MySqlCommand(deleteQuery, connection);
-                        command.Parameters.AddWithValue("@id", id);
-
-                        int rowsAffected = command.ExecuteNonQuery();
-                        connection.Close();
-
-                        if (rowsAffected > 0)
-                        {
-                            MessageBox.Show("Record deleted successfully.");
-                            loadRecord();
-                            clearFields();
-                        }
-                        else
-                        {
-                            MessageBox.Show("No records were deleted. Make sure the ID exists in the database.");
-                        }
-                    }
-                    else
-                    {
-                        MessageBox.Show("Please enter a valid ID.");
-                    }
-                }
-                catch (MySqlException ex)
-                {
-                    MessageBox.Show("Error deleting record: " + ex.Message);
-                }
+                MessageBox.Show("Please enter a valid ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
+        catch (MySqlException ex)
+        {
+            MessageBox.Show("Error deleting record: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+    }
+}
+
 
 
         private void clearFields()
@@ -214,8 +204,8 @@ namespace Swift
             employer_txtbx3.Clear();
         }
 
-  
-       
+
+
         private void employer_cmbbx1_SelectedIndexChanged_1(object sender, EventArgs e)
         {
 
@@ -225,7 +215,7 @@ namespace Swift
         {
             Employer_datagrdvw1.Rows.Clear();
             connection.Open();
-            command = new MySqlCommand("SELECT job_title, job_desc, contact_info FROM jobpost WHERE job_title LIKE @searchText OR job_desc LIKE @searchText OR contact_info LIKE @searchText", connection);
+            command = new MySqlCommand("SELECT job_title, job_desc, contact_info FROM jobpost WHERE job_title LIKE @searchText", connection);
             command.Parameters.Clear();
             command.Parameters.AddWithValue("@searchText", "%" + employer_txtbx4.Text + "%");
             reader = command.ExecuteReader();
@@ -260,17 +250,18 @@ namespace Swift
                     }
                     else
                     {
-                        // Clear all TextBoxes if no record found for the given ID
+                       
                         employer_txtbx1.Text = "";
                         employer_cmbbx1.Text = "";
                         employer_txtbx2.Text = "";
                         employer_txtbx3.Text = "";
+                        MessageBox.Show("No record found for the given ID", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     reader.Close();
                 }
                 catch (MySqlException ex)
                 {
-                    MessageBox.Show("Error: " + ex.Message);
+                    MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 finally
                 {
@@ -284,6 +275,26 @@ namespace Swift
             employer_cmbbx1.Text = Employer_datagrdvw1.CurrentRow.Cells[1].Value.ToString();
             employer_txtbx2.Text = Employer_datagrdvw1.CurrentRow.Cells[2].Value.ToString();
             employer_txtbx3.Text = Employer_datagrdvw1.CurrentRow.Cells[3].Value.ToString();
+        }
+
+        private void employer_lbl2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void employer_txtbx3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void employer_txtbx2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void employer_lbl3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

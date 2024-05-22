@@ -21,37 +21,23 @@ namespace Swift
         public Employer_notif()
         {
             InitializeComponent(); 
-            SetBackground();
             LoadData();
             PopulateComboBox();
         }
 
         private void PopulateComboBox()
         {
-            // Assuming these are the job titles
+            //
             string[] Status = { "Accept", "Will Contact", "Decline" };
             employer_cmbbx1.Items.AddRange(Status);
         }
-        private void SetBackground()
-        {
-            // Create a LinearGradientBrush for the background
-            LinearGradientBrush gradientBrush = new LinearGradientBrush(
-                this.ClientRectangle,
-                Color.FromArgb(2, 0, 36),
-                Color.FromArgb(0, 212, 255),
-                LinearGradientMode.Horizontal);
-
-            // Set the background of the form to the LinearGradientBrush
-            this.BackgroundImage = new Bitmap(this.Width, this.Height);
-            Graphics graphics = Graphics.FromImage(this.BackgroundImage);
-            graphics.FillRectangle(gradientBrush, this.ClientRectangle);
-        }
+     
 
         private void LoadData()
         {
             if (employer_datagrdvw1 == null)
             {
-                MessageBox.Show("Applicant_Datagrdvw1 is not initialized.");
+                MessageBox.Show("Data Gridview is not initialized.");
                 return;
             }
 
@@ -70,7 +56,7 @@ namespace Swift
                             string jobTitle = reader["job_title"].ToString();
                             string fullName = reader["fullname"].ToString();
                             string contactInfo = reader["contact_info"].ToString();
-                            string cvResume = reader["CV_resume"].ToString(); // Retrieve CV_resume column
+                            string cvResume = reader["CV_resume"].ToString(); 
 
                             employer_datagrdvw1.Rows.Add(employer_datagrdvw1.Rows.Count + 1, jobTitle, fullName, contactInfo, cvResume);
                         }
@@ -289,7 +275,7 @@ namespace Swift
         private void clearFields()
         {
             employer_txtbx1.Clear();
-            employer_cmbbx1.SelectedIndex = -1; // Clear the ComboBox selection
+            employer_cmbbx1.SelectedIndex = -1; 
             employer_txtbx2.Clear();
             employer_txtbx3.Clear();
         }

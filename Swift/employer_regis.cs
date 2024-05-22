@@ -2,7 +2,6 @@
 using System;
 using System.Data;
 using System.Drawing;
-using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 
 namespace Swift
@@ -15,27 +14,11 @@ namespace Swift
         public employer_regis()
         {
             InitializeComponent();
-            SetBackground();
-        }
-
-        private void SetBackground()
-        {
-            // Create a LinearGradientBrush for the background
-            LinearGradientBrush gradientBrush = new LinearGradientBrush(
-                this.ClientRectangle,
-                Color.FromArgb(2, 0, 36),
-                Color.FromArgb(0, 212, 255),
-                LinearGradientMode.Horizontal);
-
-            // Set the background of the form to the LinearGradientBrush
-            this.BackgroundImage = new Bitmap(this.Width, this.Height);
-            Graphics graphics = Graphics.FromImage(this.BackgroundImage);
-            graphics.FillRectangle(gradientBrush, this.ClientRectangle);
         }
 
         private void Applicant_txtbx2_TextChanged(object sender, EventArgs e)
         {
-            // Placeholder for text changed event logic if needed
+            
         }
 
         private void applicant_btn1_Click(object sender, EventArgs e)
@@ -50,7 +33,7 @@ namespace Swift
 
                 if (userCount >= 1)
                 {
-                    MessageBox.Show("Sorry, registration is closed. Maximum number of users reached.");
+                    MessageBox.Show("Sorry, registration is closed. Maximum number of users reached.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     employer_txtbx1.Text = "";
                     employer_txtbx2.Text = "";
                     employer_txtbx3.Text = "";
@@ -59,14 +42,14 @@ namespace Swift
 
                 if (string.IsNullOrEmpty(employer_txtbx1.Text) || string.IsNullOrEmpty(employer_txtbx2.Text) || string.IsNullOrEmpty(employer_txtbx3.Text))
                 {
-                    MessageBox.Show("Please fill all the information", "Error");
+                    MessageBox.Show("Please fill all the information", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     employer_txtbx1.Text = "";
                     employer_txtbx2.Text = "";
                     employer_txtbx3.Text = "";
                 }
                 else if (employer_txtbx2.Text != employer_txtbx3.Text)
                 {
-                    MessageBox.Show("Passwords do not match", "Error");
+                    MessageBox.Show("Passwords do not match", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     employer_txtbx1.Text = "";
                     employer_txtbx2.Text = "";
                     employer_txtbx3.Text = "";
@@ -82,7 +65,7 @@ namespace Swift
                     command.ExecuteNonQuery();
                     connection.Close();
 
-                    MessageBox.Show("Registration Successful! You can now login.");
+                    MessageBox.Show("Registration Successful! You can now login.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     employer_txtbx1.Text = "";
                     employer_txtbx2.Text = "";
                     employer_txtbx3.Text = "";
@@ -90,7 +73,7 @@ namespace Swift
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"An error occurred: {ex.Message}", "Error");
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 if (connection.State == ConnectionState.Open)
                 {
                     connection.Close();
@@ -128,7 +111,37 @@ namespace Swift
 
         private void employer_regis_Load(object sender, EventArgs e)
         {
-            // Placeholder for form load event logic if needed
+            
+        }
+
+        private void employer_txtbx3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void employer_lbl4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void employer_lbl3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void employer_txtbx1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void employer_lbl2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void applicant_pnl1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

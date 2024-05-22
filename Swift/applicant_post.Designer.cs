@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Applicant_Datagrdvw1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,10 +59,10 @@
             this.Applicant_Datagrdvw1.AllowUserToAddRows = false;
             this.Applicant_Datagrdvw1.AllowUserToDeleteRows = false;
             this.Applicant_Datagrdvw1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
-            this.Applicant_Datagrdvw1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(0)))), ((int)(((byte)(36)))));
+            this.Applicant_Datagrdvw1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(87)))));
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Open Sans Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Transparent;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Gray;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.WhiteSmoke;
@@ -73,6 +74,14 @@
             this.Column2,
             this.Column3,
             this.Column4});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Applicant_Datagrdvw1.DefaultCellStyle = dataGridViewCellStyle2;
             this.Applicant_Datagrdvw1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(0)))), ((int)(((byte)(36)))));
             this.Applicant_Datagrdvw1.Location = new System.Drawing.Point(172, 53);
             this.Applicant_Datagrdvw1.Name = "Applicant_Datagrdvw1";
@@ -111,14 +120,14 @@
             this.Column4.HeaderText = "Contact Information";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
-            this.Column4.Width = 153;
+            this.Column4.Width = 160;
             // 
             // Applicant_btn1
             // 
-            this.Applicant_btn1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(0)))), ((int)(((byte)(36)))));
-            this.Applicant_btn1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Applicant_btn1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.Applicant_btn1.ForeColor = System.Drawing.Color.Transparent;
+            this.Applicant_btn1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(87)))));
+            this.Applicant_btn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Applicant_btn1.Font = new System.Drawing.Font("Open Sans Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Applicant_btn1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(218)))), ((int)(((byte)(220)))));
             this.Applicant_btn1.Location = new System.Drawing.Point(12, 419);
             this.Applicant_btn1.Name = "Applicant_btn1";
             this.Applicant_btn1.Size = new System.Drawing.Size(140, 42);
@@ -131,18 +140,18 @@
             // 
             this.applicant_lbl1.AutoSize = true;
             this.applicant_lbl1.BackColor = System.Drawing.Color.Transparent;
-            this.applicant_lbl1.Font = new System.Drawing.Font("Segoe UI", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.applicant_lbl1.ForeColor = System.Drawing.Color.Transparent;
-            this.applicant_lbl1.Location = new System.Drawing.Point(168, 16);
+            this.applicant_lbl1.Font = new System.Drawing.Font("Open Sans Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.applicant_lbl1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(218)))), ((int)(((byte)(220)))));
+            this.applicant_lbl1.Location = new System.Drawing.Point(174, 21);
             this.applicant_lbl1.Name = "applicant_lbl1";
-            this.applicant_lbl1.Size = new System.Drawing.Size(95, 32);
+            this.applicant_lbl1.Size = new System.Drawing.Size(86, 28);
             this.applicant_lbl1.TabIndex = 4;
             this.applicant_lbl1.Text = "Search:";
             // 
             // applicant_txtbx1
             // 
             this.applicant_txtbx1.BackColor = System.Drawing.SystemColors.Control;
-            this.applicant_txtbx1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.applicant_txtbx1.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.applicant_txtbx1.Location = new System.Drawing.Point(262, 26);
             this.applicant_txtbx1.Name = "applicant_txtbx1";
             this.applicant_txtbx1.Size = new System.Drawing.Size(369, 22);
@@ -152,7 +161,7 @@
             // applicant_txtbx2
             // 
             this.applicant_txtbx2.BackColor = System.Drawing.SystemColors.Control;
-            this.applicant_txtbx2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.applicant_txtbx2.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.applicant_txtbx2.Location = new System.Drawing.Point(12, 79);
             this.applicant_txtbx2.Name = "applicant_txtbx2";
             this.applicant_txtbx2.Size = new System.Drawing.Size(140, 22);
@@ -163,18 +172,18 @@
             // 
             this.applicant_lbl2.AutoSize = true;
             this.applicant_lbl2.BackColor = System.Drawing.Color.Transparent;
-            this.applicant_lbl2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.applicant_lbl2.ForeColor = System.Drawing.Color.Transparent;
+            this.applicant_lbl2.Font = new System.Drawing.Font("Open Sans Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.applicant_lbl2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(218)))), ((int)(((byte)(220)))));
             this.applicant_lbl2.Location = new System.Drawing.Point(14, 53);
             this.applicant_lbl2.Name = "applicant_lbl2";
-            this.applicant_lbl2.Size = new System.Drawing.Size(31, 21);
+            this.applicant_lbl2.Size = new System.Drawing.Size(31, 22);
             this.applicant_lbl2.TabIndex = 7;
             this.applicant_lbl2.Text = "ID:";
             // 
             // applicant_txtbx3
             // 
             this.applicant_txtbx3.BackColor = System.Drawing.SystemColors.Control;
-            this.applicant_txtbx3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.applicant_txtbx3.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.applicant_txtbx3.Location = new System.Drawing.Point(12, 126);
             this.applicant_txtbx3.Name = "applicant_txtbx3";
             this.applicant_txtbx3.Size = new System.Drawing.Size(140, 22);
@@ -185,25 +194,25 @@
             // 
             this.applicant_lbl3.AutoSize = true;
             this.applicant_lbl3.BackColor = System.Drawing.Color.Transparent;
-            this.applicant_lbl3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.applicant_lbl3.ForeColor = System.Drawing.Color.Transparent;
+            this.applicant_lbl3.Font = new System.Drawing.Font("Open Sans Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.applicant_lbl3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(218)))), ((int)(((byte)(220)))));
             this.applicant_lbl3.Location = new System.Drawing.Point(13, 101);
             this.applicant_lbl3.Name = "applicant_lbl3";
-            this.applicant_lbl3.Size = new System.Drawing.Size(71, 21);
+            this.applicant_lbl3.Size = new System.Drawing.Size(71, 22);
             this.applicant_lbl3.TabIndex = 9;
             this.applicant_lbl3.Text = "Job Title";
             // 
             // applicant_btn2
             // 
-            this.applicant_btn2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(0)))), ((int)(((byte)(36)))));
-            this.applicant_btn2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.applicant_btn2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.applicant_btn2.ForeColor = System.Drawing.Color.Transparent;
+            this.applicant_btn2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(87)))));
+            this.applicant_btn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.applicant_btn2.Font = new System.Drawing.Font("Open Sans Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.applicant_btn2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(218)))), ((int)(((byte)(220)))));
             this.applicant_btn2.Location = new System.Drawing.Point(12, 467);
             this.applicant_btn2.Name = "applicant_btn2";
             this.applicant_btn2.Size = new System.Drawing.Size(140, 42);
             this.applicant_btn2.TabIndex = 12;
-            this.applicant_btn2.Text = "Refresh Table";
+            this.applicant_btn2.Text = "Refresh ";
             this.applicant_btn2.UseVisualStyleBackColor = false;
             this.applicant_btn2.Click += new System.EventHandler(this.applicant_btn2_Click);
             // 
@@ -211,18 +220,18 @@
             // 
             this.applicant_lbl4.AutoSize = true;
             this.applicant_lbl4.BackColor = System.Drawing.Color.Transparent;
-            this.applicant_lbl4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.applicant_lbl4.ForeColor = System.Drawing.Color.Transparent;
+            this.applicant_lbl4.Font = new System.Drawing.Font("Open Sans Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.applicant_lbl4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(218)))), ((int)(((byte)(220)))));
             this.applicant_lbl4.Location = new System.Drawing.Point(14, 150);
             this.applicant_lbl4.Name = "applicant_lbl4";
-            this.applicant_lbl4.Size = new System.Drawing.Size(88, 21);
+            this.applicant_lbl4.Size = new System.Drawing.Size(91, 22);
             this.applicant_lbl4.TabIndex = 12;
             this.applicant_lbl4.Text = "Full Name:";
             // 
             // applicant_txtbx4
             // 
             this.applicant_txtbx4.BackColor = System.Drawing.SystemColors.Control;
-            this.applicant_txtbx4.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.applicant_txtbx4.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.applicant_txtbx4.Location = new System.Drawing.Point(12, 174);
             this.applicant_txtbx4.Name = "applicant_txtbx4";
             this.applicant_txtbx4.Size = new System.Drawing.Size(140, 22);
@@ -231,9 +240,10 @@
             // applicant_rtxtbx1
             // 
             this.applicant_rtxtbx1.BackColor = System.Drawing.SystemColors.Control;
-            this.applicant_rtxtbx1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.applicant_rtxtbx1.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.applicant_rtxtbx1.Location = new System.Drawing.Point(12, 294);
             this.applicant_rtxtbx1.Name = "applicant_rtxtbx1";
+            this.applicant_rtxtbx1.ReadOnly = true;
             this.applicant_rtxtbx1.Size = new System.Drawing.Size(140, 32);
             this.applicant_rtxtbx1.TabIndex = 16;
             this.applicant_rtxtbx1.Text = "";
@@ -242,20 +252,20 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label2.ForeColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Open Sans Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(218)))), ((int)(((byte)(220)))));
             this.label2.Location = new System.Drawing.Point(12, 264);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 21);
+            this.label2.Size = new System.Drawing.Size(93, 22);
             this.label2.TabIndex = 17;
             this.label2.Text = "Upload CV:";
             // 
             // Applicant_btn3
             // 
-            this.Applicant_btn3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(0)))), ((int)(((byte)(36)))));
-            this.Applicant_btn3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Applicant_btn3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.Applicant_btn3.ForeColor = System.Drawing.Color.Transparent;
+            this.Applicant_btn3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(87)))));
+            this.Applicant_btn3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Applicant_btn3.Font = new System.Drawing.Font("Open Sans Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Applicant_btn3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(218)))), ((int)(((byte)(220)))));
             this.Applicant_btn3.Location = new System.Drawing.Point(12, 333);
             this.Applicant_btn3.Name = "Applicant_btn3";
             this.Applicant_btn3.Size = new System.Drawing.Size(140, 42);
@@ -271,21 +281,22 @@
             // applicant_txtbx5
             // 
             this.applicant_txtbx5.BackColor = System.Drawing.SystemColors.Control;
-            this.applicant_txtbx5.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.applicant_txtbx5.Font = new System.Drawing.Font("Open Sans", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.applicant_txtbx5.Location = new System.Drawing.Point(12, 241);
             this.applicant_txtbx5.Name = "applicant_txtbx5";
             this.applicant_txtbx5.Size = new System.Drawing.Size(140, 22);
             this.applicant_txtbx5.TabIndex = 9;
+            this.applicant_txtbx5.TextChanged += new System.EventHandler(this.applicant_txtbx5_TextChanged);
             // 
             // applicant_lbl5
             // 
             this.applicant_lbl5.AutoSize = true;
             this.applicant_lbl5.BackColor = System.Drawing.Color.Transparent;
-            this.applicant_lbl5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.applicant_lbl5.ForeColor = System.Drawing.Color.Transparent;
+            this.applicant_lbl5.Font = new System.Drawing.Font("Open Sans Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.applicant_lbl5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(218)))), ((int)(((byte)(220)))));
             this.applicant_lbl5.Location = new System.Drawing.Point(14, 195);
             this.applicant_lbl5.Name = "applicant_lbl5";
-            this.applicant_lbl5.Size = new System.Drawing.Size(100, 42);
+            this.applicant_lbl5.Size = new System.Drawing.Size(106, 44);
             this.applicant_lbl5.TabIndex = 19;
             this.applicant_lbl5.Text = "Contact \r\nInformation:";
             // 
@@ -293,7 +304,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(123)))), ((int)(((byte)(157)))));
             this.ClientSize = new System.Drawing.Size(655, 550);
             this.Controls.Add(this.applicant_txtbx5);
             this.Controls.Add(this.applicant_lbl5);

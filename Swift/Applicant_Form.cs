@@ -16,26 +16,9 @@ namespace Swift
         public Applicant_Form()
         {
             InitializeComponent();
-            SetBackground();
         }
-        private void SetBackground()
-        {
-            // Create a LinearGradientBrush for the background
-            LinearGradientBrush gradientBrush = new LinearGradientBrush(
-                this.ClientRectangle,
-                Color.FromArgb(2, 0, 36),
-                Color.FromArgb(0, 212, 255),
-                LinearGradientMode.Horizontal);
 
-            // Set the background of the form to the LinearGradientBrush
-            this.BackgroundImage = new Bitmap(this.Width, this.Height);
-            Graphics graphics = Graphics.FromImage(this.BackgroundImage);
-            graphics.FillRectangle(gradientBrush, this.ClientRectangle);
-
-            applicant_pnl3.BackgroundImage = new Bitmap(applicant_pnl3.Width, applicant_pnl3.Height);
-            Graphics graphics2 = Graphics.FromImage(applicant_pnl3.BackgroundImage);
-            graphics2.FillRectangle(gradientBrush, applicant_pnl3.ClientRectangle);
-        }
+        public string ApplicantName { get; set; } // Rename to ApplicantName
 
         private void Button2_Click(object sender, EventArgs e)
         {
@@ -44,8 +27,12 @@ namespace Swift
 
         private void Applicant_Form_Load(object sender, EventArgs e)
         {
-
+            // Automatically load the applicant_post form into applicant_pnl3 when the form loads
+            Loadform(new applicant_post());
+            // Display the applicant's name in the label
+            Applicant_name.Text = ApplicantName;
         }
+
         public void Loadform(object Form)
         {
             if (this.applicant_pnl3.Controls.Count > 0)
@@ -57,14 +44,15 @@ namespace Swift
             this.applicant_pnl3.Tag = f;
             f.Show();
         }
+
         private void Applicant_lbl1_Click(object sender, EventArgs e)
         {
-
+            // Fetch applicant's name from the database (if needed)
         }
 
         private void Applicant_pnl3_Paint(object sender, PaintEventArgs e)
         {
-
+            // Currently empty
         }
 
         private void Applicant_btn3_Click(object sender, EventArgs e)
@@ -86,8 +74,7 @@ namespace Swift
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            // Currently empty
         }
     }
-    }
-
+}

@@ -20,22 +20,9 @@ namespace Swift
         public Applicant_login()
         {
             InitializeComponent();
-            SetBackground();
+            
         }
-        private void SetBackground()
-        {
-            // Create a LinearGradientBrush for the background
-            LinearGradientBrush gradientBrush = new LinearGradientBrush(
-                this.ClientRectangle,
-                Color.FromArgb(2, 0, 36),
-                Color.FromArgb(0, 212, 255),
-                LinearGradientMode.Horizontal);
-
-            // Set the background of the form to the LinearGradientBrush
-            this.BackgroundImage = new Bitmap(this.Width, this.Height);
-            Graphics graphics = Graphics.FromImage(this.BackgroundImage);
-            graphics.FillRectangle(gradientBrush, this.ClientRectangle);
-        }
+       
         private void Applicant_login_Load(object sender, EventArgs e)
         {
 
@@ -83,23 +70,24 @@ namespace Swift
             mdr = command.ExecuteReader();
             if (mdr.Read())
             {
-                MessageBox.Show("Login Successful!");
+                MessageBox.Show("Login Successful!","Logged in",MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Hide();
-                Applicant_Form form2 = new Applicant_Form();
-                form2.ShowDialog();
-                        applicant_txtbx1.Text = "";
-                        applicant_txtbx2.Text = "";
+                        // Create an instance of Applicant_Form
+                        Applicant_Form form2 = new Applicant_Form();
+                        // Set the value of ApplicantName
+                        form2.ApplicantName = applicant_txtbx1.Text;
+                        form2.ShowDialog();
                     }
             else
             {
-                MessageBox.Show("Invalid username or password");
+                MessageBox.Show("Invalid username or password","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
-            }
-            finally
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
             {
                 connection.Close();
             }
@@ -109,6 +97,25 @@ namespace Swift
         private void applicant_txtbx1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Applicant_regis applicant_Regis = new Applicant_regis();
+            applicant_Regis.Show();
+            this.Hide();
+        }
+
+        private void applicant_lbl2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void applicant_lnklbl2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            applicant_forgot applicant_Forgot = new applicant_forgot();
+            applicant_Forgot.Show();
+            this.Hide();
         }
     }
 }
